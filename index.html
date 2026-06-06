@@ -637,6 +637,12 @@ body{
 <div class="counter"><span id="cur">1</span><span class="sep">/</span><span id="tot">15</span></div>
 <div class="hint">← → chuyển slide · Home/End đầu/cuối</div>
 
+<!-- mobile-only swipe hint (auto-hides after first swipe) -->
+<div class="mhint" id="mhint" aria-hidden="true">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <span>Vuốt để chuyển slide</span>
+</div>
+
 <style>
 /* ====== KPI DECK — shared content styles ====== */
 .lead-note{ text-align:center; color:var(--ink-600); font-size:var(--body-size); max-width:64ch; margin:.2rem auto 0; line-height:1.45; }
@@ -1104,6 +1110,119 @@ body{
 </section>
 
 
+<style>
+/* ============================================================
+   MOBILE PORTRAIT MODE  (điện thoại — màn hình dọc · vuốt chuyển slide)
+   Đặt cuối nguồn để override các layout nhiều cột ở trên.
+   ============================================================ */
+@media (max-width: 768px){
+  /* — thu nhỏ token chữ/khoảng cách cho màn hình dọc — */
+  :root{
+    --title-size:clamp(1.25rem,5.4vw,1.9rem);
+    --h2-size:clamp(1.1rem,4.6vw,1.6rem);
+    --h3-size:clamp(1rem,4vw,1.4rem);
+    --body-size:clamp(.9rem,3.6vw,1.05rem);
+    --small-size:clamp(.78rem,3.1vw,.95rem);
+    --slide-padding:clamp(1rem,5vw,1.6rem);
+    --content-gap:clamp(.7rem,3vw,1.2rem);
+  }
+
+  /* — mỗi slide cao bằng màn hình, cho phép cuộn nội bộ nếu nội dung quá cao — */
+  .slide-content{
+    justify-content:flex-start;          /* tránh lỗi flexbox cắt đầu khi nội dung cao */
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-top:clamp(3rem,11vh,4.5rem);   /* chừa chỗ cho bộ đếm góc trên */
+    padding-bottom:clamp(2.4rem,9vh,3.6rem);
+  }
+  .slide-content > .wrap{ margin-block:auto; }   /* căn giữa dọc khi slide đủ ngắn */
+  .slide-content::-webkit-scrollbar{ width:0; height:0; }
+  .wrap, .wrap--wide{ width:92%; }
+
+  /* — tiêu đề căn giữa gọn hơn — */
+  .s-title{ font-size:var(--title-size); }
+  .hero__word{ font-size:clamp(3rem,16vw,5.5rem); }
+
+  /* — XẾP MỌI LAYOUT NHIỀU CỘT THÀNH 1 CỘT (dọc) — */
+  .two-view, .tri, .cards--4, .cards--3, .quad4a,
+  .ksnb, .ba, .duo, .duo--2, .kmap, .model, .wgrid,
+  .reco, .bcg, .domino, .org__children{
+    display:flex;
+    flex-direction:column;
+    gap:.7rem;
+  }
+  .duostat, .wgrid, .bcg, .reco{ max-width:none; }
+  .duo{ max-width:none; }
+
+  /* — xoay các mũi tên/nối ngang thành dọc — */
+  .tv-mid{ transform:rotate(90deg); font-size:2rem; margin:.1rem auto; }
+  .ba__mid .ba__arrow{ transform:rotate(90deg); }
+  .duo__plus{ flex-direction:row; }
+  .dom__arr{ justify-content:center; transform:rotate(90deg); }
+  .mconn{ transform:rotate(90deg); }
+
+  /* — domino & các side card chiếm full chiều ngang — */
+  .ba__side{ min-height:0; }
+  .domino .dom{ width:100%; }
+  .domino:hover .dom{ transform:none; opacity:1; filter:none; }  /* tắt hiệu ứng hover trên cảm ứng */
+
+  /* — sơ đồ KSNB dọc — */
+  .ksnb__diagram{ flex-direction:row; gap:.6rem; align-items:center; justify-content:center; }
+  .ks-link{ transform:rotate(-90deg); width:36px; height:36px; }
+
+  /* — 5 bước: chuyển từ hàng ngang sang cột dọc — */
+  .s5{ flex-direction:column; align-items:flex-start; gap:.7rem; }
+  .s5__step{ flex-direction:row; align-items:center; gap:.8rem; width:100%; }
+  .s5__step span{ max-width:none; text-align:left; }
+  .s5-track, .s5-fill{ display:none; }
+  .steps5{ padding:.6rem 0; }
+
+  /* — cây phân rã: bỏ đường nối ngang — */
+  .org__children::before{ display:none; }
+  .org__children .org__node::before{ display:none; }
+  .org__node{ display:block; width:100%; text-align:center; }
+
+  /* — score bars: gọn lại — */
+  .srow{ grid-template-columns:1fr auto; grid-template-areas:"lbl val" "bar bar"; gap:.3rem .6rem; }
+  .slbl{ grid-area:lbl; } .sval{ grid-area:val; } .strack{ grid-area:bar; }
+
+  /* — nexus cause→impact: xếp dọc, mũi tên xoay — */
+  .nxrow{ grid-template-columns:1fr; gap:.4rem; text-align:center; }
+  .nxa{ transform:rotate(90deg); margin:0 auto; }
+
+  /* — bảng KPI 4 nhóm / kchips bám nội dung — */
+  .kchips{ justify-content:flex-start; }
+
+  /* — chip hàng tiêu đề hero — */
+  .legal-chips, .benefits, .wb-flags, .map-row{ gap:.5rem; }
+
+  /* — ẩn bớt watermark/đồ hoạ trang trí cồng kềnh trên màn nhỏ — */
+  .oecd-wm, .govgraph, .hero-motion-bg{ display:none; }
+
+  /* — gợi ý vuốt — */
+  .mhint{ display:flex; }
+}
+
+/* swipe hint pill — chỉ hiện trên điện thoại, tự ẩn sau lần vuốt đầu */
+.mhint{
+  display:none;
+  position:fixed; left:50%; bottom:1rem; transform:translateX(-50%);
+  z-index:62; align-items:center; gap:.4rem;
+  font-family:var(--font-display); font-weight:700;
+  font-size:.72rem; color:var(--pvep-blue);
+  background:rgba(255,255,255,.82); border:1px solid rgba(0,131,199,.28);
+  padding:.4rem .9rem; border-radius:999px;
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  box-shadow:0 6px 18px rgba(10,42,74,.12);
+  animation:mhintBob 1.8s ease-in-out infinite;
+  transition:opacity .4s ease;
+}
+.mhint svg{ animation:mhintBob 1.8s ease-in-out infinite; }
+.mhint.is-hidden{ opacity:0; pointer-events:none; }
+@keyframes mhintBob{ 0%,100%{ transform:translateX(-50%) translateY(0); } 50%{ transform:translateX(-50%) translateY(-5px); } }
+@media (prefers-reduced-motion:reduce){ .mhint, .mhint svg{ animation:none!important; } }
+</style>
+
 <script>
 /* =====================================================================
    activate.js  (animated-components — included in full)
@@ -1241,6 +1360,22 @@ body{
   }
   size(); loop();
   window.addEventListener("resize", size);
+})();
+
+/* =====================================================================
+   Mobile swipe hint — tự ẩn sau lần vuốt/cuộn đầu tiên
+   (Việc chuyển slide khi vuốt do CSS scroll-snap đảm nhiệm sẵn)
+   ===================================================================== */
+(function(){
+  var hint = document.getElementById("mhint"); if (!hint) return;
+  var hide = function(){ hint.classList.add("is-hidden"); cleanup(); };
+  function cleanup(){
+    window.removeEventListener("touchmove", hide, { passive:true });
+    window.removeEventListener("scroll", hide, true);
+  }
+  window.addEventListener("touchmove", hide, { passive:true });
+  window.addEventListener("scroll", hide, true);
+  setTimeout(hide, 6000); // ẩn sau 6s kể cả khi chưa vuốt
 })();
 </script>
 </body>
