@@ -198,8 +198,8 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
    SLIDE 1 — HERO
    ============================================================ */
 .hero-particles{ position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }
-.hero__word{ font-family:var(--font-display); font-weight:800; line-height:.9; letter-spacing:-.03em; position:relative;
-  font-size:clamp(4.5rem,19vw,14rem);
+.hero__word{ font-family:var(--font-display); font-weight:800; line-height:.95; letter-spacing:-.02em; position:relative;
+  font-size:clamp(2.4rem,7.5vw,5.6rem);
   background:linear-gradient(120deg,var(--pvep-navy) 0%,var(--pvep-blue) 45%,var(--pvep-green) 65%,var(--pvep-blue) 100%);
   background-size:220% 100%;
   -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
@@ -639,7 +639,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   <div class="rail__item" data-chapter="2" data-target="6"><span class="dot"></span><span class="rail__num">03</span>Cấu trúc quản lý</div>
   <div class="rail__item" data-chapter="3" data-target="8"><span class="dot"></span><span class="rail__num">04</span>Quy định &amp; Tiêu chí</div>
   <div class="rail__item" data-chapter="4" data-target="12"><span class="dot"></span><span class="rail__num">05</span>Chấm điểm DADK</div>
-  <div class="rail__item" data-chapter="5" data-target="14"><span class="dot"></span><span class="rail__num">06</span>Kết luận &amp; Kiến nghị</div>
+  <div class="rail__item" data-chapter="5" data-target="13"><span class="dot"></span><span class="rail__num">06</span>Kết luận &amp; Kiến nghị</div>
 </nav>
 
 <!-- slide counter -->
@@ -939,21 +939,39 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   </div></div>
 </section>
 
-<!-- ========================= SLIDE 8 — Nexus nhân–quả ========================= -->
+<!-- ========================= SLIDE 8 — Truy vết liên kết CV 165 (tương tác) ========================= -->
 <section class="slide" data-chapter="2">
   <div class="slide-content"><div class="wrap">
     <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Liên kết nhân–quả</div>
+      <div class="eyebrow ac-reveal" style="--i:0">Liên kết nhân–quả · bấm để truy vết</div>
       <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Mỗi KPI năm trọng yếu → <span class="neo">KPI CV 165 bị ảnh hưởng</span></h2>
     </div>
-    <div class="nexus">
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:2"><div class="nxc">CAPEX vượt kế hoạch</div><div class="nxa">→</div><div class="nxi">NPV · FCF · DSCR</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:3"><div class="nxc">OPEX / UPC tăng</div><div class="nxa">→</div><div class="nxi">OCF · NCF · CFADS · Break-even</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:4"><div class="nxc">Sản lượng không đạt</div><div class="nxa">→</div><div class="nxi">Doanh thu · NCF · CFADS · DSCR</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:5"><div class="nxc">Chậm First Oil / First Gas</div><div class="nxa">→</div><div class="nxi">NPV · IRR · Payback · dòng tiền lũy kế</div></div>
-      <div class="nxrow ac-reveal ac-reveal--up" style="--i:6"><div class="nxc">Dòng tiền PVEP âm hơn KH</div><div class="nxa">→</div><div class="nxi">FCF · funding gap · nhu cầu hỗ trợ vốn</div></div>
+    <div class="iz-trace ac-reveal" style="--i:2" id="trace">
+      <div class="iz-causes">
+        <button class="iz-cause on" data-tg="NPV,FCF,DSCR">CAPEX vượt kế hoạch</button>
+        <button class="iz-cause" data-tg="OCF,NCF,CFADS,Break-even">OPEX / UPC tăng</button>
+        <button class="iz-cause" data-tg="Doanh thu,NCF,CFADS,DSCR">Sản lượng không đạt</button>
+        <button class="iz-cause" data-tg="NPV,IRR,Payback,Dòng tiền lũy kế">Chậm First Oil / First Gas</button>
+        <button class="iz-cause" data-tg="FCF,Funding gap,Nhu cầu hỗ trợ vốn">Dòng tiền PVEP âm hơn KH</button>
+      </div>
+      <div class="iz-trace__mid">→</div>
+      <div class="iz-tgts" id="traceTgts">
+        <span class="iz-tgt" data-k="NPV">NPV</span>
+        <span class="iz-tgt" data-k="IRR">IRR</span>
+        <span class="iz-tgt" data-k="Payback">Payback</span>
+        <span class="iz-tgt" data-k="FCF">FCF</span>
+        <span class="iz-tgt" data-k="OCF">OCF</span>
+        <span class="iz-tgt" data-k="NCF">NCF</span>
+        <span class="iz-tgt" data-k="CFADS">CFADS</span>
+        <span class="iz-tgt" data-k="DSCR">DSCR</span>
+        <span class="iz-tgt" data-k="Break-even">Break-even</span>
+        <span class="iz-tgt" data-k="Doanh thu">Doanh thu</span>
+        <span class="iz-tgt" data-k="Dòng tiền lũy kế">Dòng tiền lũy kế</span>
+        <span class="iz-tgt" data-k="Funding gap">Funding gap</span>
+        <span class="iz-tgt" data-k="Nhu cầu hỗ trợ vốn">Nhu cầu hỗ trợ vốn</span>
+      </div>
     </div>
-    <p class="lead-note ac-reveal" style="--i:7; margin-top:.8rem">Tránh tình trạng đạt KPI năm nhưng không rõ ảnh hưởng đến mục tiêu theo phê duyệt SDV; tăng khả năng cảnh báo sớm và điều chỉnh chủ động.</p>
+    <p class="iz-hint ac-reveal" style="--i:3">Bấm một <b>nguyên nhân (KPI năm)</b> bên trái → các <b>KPI CV 165</b> bị ảnh hưởng sẽ sáng lên. Tránh đạt KPI năm nhưng không rõ tác động đến mục tiêu theo phê duyệt SDV.</p>
   </div></div>
 </section>
 
@@ -1002,90 +1020,115 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   </div></div>
 </section>
 
-<!-- ========================= SLIDE 12 — Quản trị danh mục QĐ 1200/1347 ========================= -->
+<!-- ========================= SLIDE 12 — Bộ lọc trọng số danh mục (tương tác) ========================= -->
 <section class="slide" data-chapter="3">
   <div class="slide-content"><div class="wrap wrap--wide">
-    <div class="head-center" style="margin-bottom:.4rem">
-      <div class="eyebrow ac-reveal" style="--i:0">Quản trị danh mục · QĐ 1200 · 1347</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Trọng số chấm điểm &amp; cảnh báo danh mục</h2>
+    <div class="head-center" style="margin-bottom:.35rem">
+      <div class="eyebrow ac-reveal" style="--i:0">Quản trị danh mục · QĐ 1200 · 1347 · bấm để lọc</div>
+      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Bộ lọc trọng số &amp; định vị danh mục</h2>
     </div>
-    <div class="wgrid">
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:2"><h4>DA Tìm kiếm – Thăm dò</h4><ul class="wlist"><li>Tiềm năng dầu khí thu hồi <b>35%</b></li><li>Hệ số thành công POS <b>15%</b></li><li>Thị trường tiêu thụ <b>15%</b></li><li>Chiến lược &amp; khả năng triển khai <b>15%</b></li><li>Chi phí / Khác <b>20%</b></li></ul></div>
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:3; border-top-color:var(--pvep-green)"><h4>DA Phát triển</h4><ul class="wlist"><li>NPV@IRRmin <b>30%</b></li><li>Trữ lượng thu hồi KT <b>20%</b></li><li>Rủi ro <b>20%</b></li><li>Capex/thùng <b>12,5%</b></li><li>Opex/thùng · P/I <b>17,5%</b></li></ul></div>
-      <div class="wcard ac-reveal ac-reveal--up" style="--i:4; border-top-color:var(--pvep-navy)"><h4>DA Khai thác</h4><ul class="wlist"><li>Dòng tiền chiết khấu tiếp theo <b>30%</b></li><li>Trữ lượng còn lại <b>20%</b></li><li>Đơn giá khai thác UPC <b>20%</b></li><li>Sản lượng TB năm còn lại <b>20%</b></li><li>NCF/Tổng chi phí LF <b>10%</b></li></ul></div>
-    </div>
-    <div class="m-stack" style="display:grid; grid-template-columns:1.1fr 1fr; gap:1rem; margin-top:.7rem; align-items:center">
-      <div class="ksem ac-pulse ac-reveal" style="--i:5; box-shadow:0 8px 22px rgba(10,42,74,.08)"><span class="g" style="font-size:.72rem; padding:.5rem">AN TOÀN</span><span class="y" style="font-size:.72rem; padding:.5rem">CẢNH BÁO</span><span class="r" style="font-size:.72rem; padding:.5rem">NGUY HIỂM</span></div>
-      <div class="bcg ac-reveal" style="--i:6">
-        <div class="bchip bchip--s"><b>Star</b> — tiềm năng tăng trưởng</div>
-        <div class="bchip bchip--c"><b>Cows</b> — trụ cột dòng tiền</div>
-        <div class="bchip bchip--q"><b>Question</b> — chưa rõ ràng</div>
-        <div class="bchip bchip--d"><b>Dogs</b> — dòng tiền âm, ít tiềm năng</div>
+    <div class="head-center" style="margin-bottom:.35rem">
+      <div class="iz-seg ac-reveal" id="portSeg" style="--i:2">
+        <button data-type="tktd" class="on">Tìm kiếm – Thăm dò</button>
+        <button data-type="ptr">Phát triển</button>
+        <button data-type="kt">Khai thác</button>
       </div>
     </div>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 13 — Cơ cấu 100 điểm ========================= -->
-<section class="slide" data-chapter="4">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Nguyên tắc chấm điểm DADK</div>
-      <h2 class="s-title ac-reveal" style="--i:1">Cơ cấu điểm đánh giá <span class="neo">100 điểm</span></h2>
-    </div>
-    <div class="score">
-      <div class="srow ac-reveal" style="--i:2"><span class="slbl">Chỉ tiêu KPI</span><div class="strack"><div class="sbar ac-fill-x" style="--w:100%; --i:0"></div></div><span class="sval" data-count-to="30">0</span></div>
-      <div class="srow ac-reveal" style="--i:3"><span class="slbl">Nhiệm vụ trọng tâm</span><div class="strack"><div class="sbar ac-fill-x" style="--w:100%; --i:1"></div></div><span class="sval" data-count-to="30">0</span></div>
-      <div class="srow ac-reveal" style="--i:4"><span class="slbl">Mức đóng góp KQ SXKD</span><div class="strack"><div class="sbar sbar--n ac-fill-x" style="--w:66%; --i:2"></div></div><span class="sval" data-count-to="20">0</span></div>
-      <div class="srow ac-reveal" style="--i:5"><span class="slbl">Tuân thủ &amp; phối hợp</span><div class="strack"><div class="sbar sbar--c ac-fill-x" style="--w:33%; --i:3"></div></div><span class="sval" data-count-to="10">0</span></div>
-      <div class="srow ac-reveal" style="--i:6"><span class="slbl">Sự trưởng thành Dự án</span><div class="strack"><div class="sbar sbar--g ac-fill-x" style="--w:33%; --i:4"></div></div><span class="sval" data-count-to="10">0</span></div>
-    </div>
-    <p class="lead-note ac-reveal" style="--i:7; margin-top:1rem">Thang 0–100. Có <b>điểm cộng</b> cho thành tích nổi bật (vượt KHQT, đạt tiến độ FO, sáng kiến, chuyển đổi số…) nhưng tổng không vượt 100.</p>
-  </div></div>
-</section>
-
-<!-- ========================= SLIDE 14 — Xếp loại & tỷ trọng ========================= -->
-<section class="slide" data-chapter="4">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Xếp loại &amp; tổng hợp điểm</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Mức độ hoàn thành nhiệm vụ Dự án</h2>
-    </div>
-    <div class="m-stack" style="display:grid; grid-template-columns:1.3fr 1fr; gap:1.6rem; align-items:center">
-      <div class="ladder">
-        <div class="lrow lrow--1 ac-reveal ac-reveal--right" style="--i:2"><span class="lrow__b" data-count-to="95" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành xuất sắc</span></div>
-        <div class="lrow lrow--2 ac-reveal ac-reveal--right" style="--i:3"><span class="lrow__b" data-count-to="80" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành tốt</span></div>
-        <div class="lrow lrow--3 ac-reveal ac-reveal--right" style="--i:4"><span class="lrow__b" data-count-to="50" data-count-prefix="≥ ">≥ 0</span><span class="lrow__t">Hoàn thành</span></div>
-        <div class="lrow lrow--4 ac-reveal ac-reveal--right" style="--i:5"><span class="lrow__b" data-count-to="50" data-count-prefix="&lt; ">&lt; 0</span><span class="lrow__t">Không hoàn thành</span></div>
+    <div class="iz-grid2">
+      <div class="iz-panel ac-reveal ac-reveal--left" style="--i:3">
+        <div class="iz-panel__t"><span class="ti"></span>Nhập điểm tiêu chí <span style="font-weight:600;color:var(--ink-500);font-size:.72rem">(0–10) · % = trọng số</span></div>
+        <div id="portCrit"></div>
       </div>
-      <div>
-        <p class="slbl ac-reveal" style="--i:5; text-align:center; margin-bottom:.5rem">Tỷ trọng tổng hợp điểm cuối cùng</p>
-        <div class="duo">
-          <div class="duostat ac-pop" style="--i:6"><div class="duostat__n" data-count-to="70" data-count-suffix="%">0%</div><div class="duostat__l">Tổng Giám đốc</div></div>
-          <div class="duostat duostat--g ac-pop" style="--i:7"><div class="duostat__n" data-count-to="30" data-count-suffix="%">0%</div><div class="duostat__l">PTGĐ phụ trách DA</div></div>
+      <div class="iz-panel ac-reveal ac-reveal--right" style="--i:4">
+        <div class="iz-panel__t"><span class="ti"></span>Định vị ma trận BCG</div>
+        <div class="iz-bcg" id="portBcg">
+          <span class="iz-bcg__line h"></span><span class="iz-bcg__line v"></span>
+          <div class="iz-bcg__q q-question"><span>Question</span><small>Chưa rõ ràng</small></div>
+          <div class="iz-bcg__q q-star"><span>Star</span><small>Tăng trưởng</small></div>
+          <div class="iz-bcg__q q-dog"><span>Dog</span><small>Ít tiềm năng</small></div>
+          <div class="iz-bcg__q q-cow"><span>Cow</span><small>Trụ cột dòng tiền</small></div>
+          <span class="iz-bcg__axis x">Vị thế / dòng tiền →</span>
+          <span class="iz-bcg__axis y">Tiềm năng →</span>
+          <span class="iz-bcg__dot" id="portDot" style="left:50%; bottom:50%"></span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-top:.55rem">
+          <div><div style="font-size:.6rem;color:var(--ink-500);font-weight:700;text-transform:uppercase;letter-spacing:.08em">Điểm tổng hợp</div><div style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3vw,2rem);color:var(--pvep-navy)"><span id="portScore">0</span><span style="font-size:.6em;color:var(--ink-500)">/100</span></div></div>
+          <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:.35rem"><div class="iz-badge" id="portBadge" style="background:var(--pvep-blue); font-size:.85rem">—</div><div class="iz-traffic" id="portLamp"><span class="iz-lamp iz-lamp--g"></span><span class="iz-lamp iz-lamp--y"></span><span class="iz-lamp iz-lamp--r"></span></div></div>
         </div>
       </div>
     </div>
   </div></div>
 </section>
 
-<!-- ========================= SLIDE 15 — Hai phương án ========================= -->
+<!-- ========================= SLIDE 13 — Máy chấm điểm DADK (tương tác) ========================= -->
+<section class="slide" data-chapter="4">
+  <div class="slide-content"><div class="wrap wrap--wide">
+    <div class="head-center" style="margin-bottom:.35rem">
+      <div class="eyebrow ac-reveal" style="--i:0">Nguyên tắc chấm điểm DADK · kéo để thử</div>
+      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Máy chấm điểm &amp; xếp loại <span class="neo">Dự án dầu khí</span></h2>
+    </div>
+    <div class="iz-grid2">
+      <div class="iz-panel ac-reveal ac-reveal--left" style="--i:2">
+        <div class="iz-panel__t"><span class="ti"></span>Điểm thành phần (TGĐ chấm) — thang 100</div>
+        <div id="scComp"></div>
+        <hr class="iz-div"/>
+        <div class="iz-row">
+          <span class="iz-row__lbl">PTGĐ phụ trách DA chấm <span class="iz-row__cap" style="color:var(--pvep-green);background:rgba(0,176,80,.12)">0–100</span></span>
+          <span class="iz-row__val" id="scPtgVal">85</span>
+          <input class="iz-range iz-range--g" id="scPtg" type="range" min="0" max="100" value="85">
+        </div>
+        <div class="iz-row">
+          <span class="iz-row__lbl">Tỷ trọng tổng hợp</span>
+          <span class="iz-row__val" style="font-size:.8rem"><span class="iz-split"><span class="t" id="scWT">70%</span><span style="color:var(--ink-500);margin:0 .25rem">·</span><span class="p" id="scWP">30%</span></span></span>
+          <input class="iz-range" id="scW" type="range" min="0" max="100" value="70">
+        </div>
+        <div style="font-size:.58rem;color:var(--ink-500);display:flex;justify-content:space-between;font-weight:600"><span>← TGĐ</span><span>PTGĐ phụ trách DA →</span></div>
+      </div>
+      <div class="iz-panel iz-result ac-reveal ac-reveal--right" style="--i:3">
+        <svg class="iz-ring" viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="iz-ring__track" cx="100" cy="100" r="80"></circle>
+          <circle class="iz-ring__val" id="scRing" cx="100" cy="100" r="80" transform="rotate(-90 100 100)"></circle>
+          <text class="iz-ring__num" id="scNum" x="100" y="96" text-anchor="middle" style="font-size:48px">0</text>
+          <text x="100" y="124" text-anchor="middle" style="font-size:13px; fill:var(--ink-500); font-family:var(--font-body)">/ 100 điểm</text>
+        </svg>
+        <div class="iz-badge" id="scBadge">—</div>
+        <div class="iz-traffic" id="scLamp"><span class="iz-lamp iz-lamp--g"></span><span class="iz-lamp iz-lamp--y"></span><span class="iz-lamp iz-lamp--r"></span></div>
+        <div class="iz-tiers" id="scTiers">
+          <div class="iz-tier iz-tier--1"><b>≥ 95</b><span>Hoàn thành xuất sắc</span></div>
+          <div class="iz-tier iz-tier--2"><b>≥ 80</b><span>Hoàn thành tốt</span></div>
+          <div class="iz-tier iz-tier--3"><b>≥ 50</b><span>Hoàn thành</span></div>
+          <div class="iz-tier iz-tier--4"><b>&lt; 50</b><span>Không hoàn thành</span></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ========================= SLIDE 15 — Hai phương án (thiết kế cao cấp) ========================= -->
 <section class="slide" data-chapter="5">
   <div class="slide-content"><div class="wrap">
     <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Đánh giá phương án</div>
+      <div class="eyebrow ac-reveal" style="--i:0">Đánh giá phương án · Khuyến nghị của Ban KSNB</div>
       <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Có nên giao thêm bộ KPI hiệu quả sử dụng vốn?</h2>
     </div>
-    <div class="two-view">
-      <div class="tv-col ac-reveal ac-reveal--left" style="--i:2; border-left:4px solid var(--danger)">
-        <div class="tv-col__head"><span class="tv-tag" style="color:var(--danger)">Phương án 1</span><h3 style="color:var(--ink-700)">Giao bộ KPI vốn riêng — gắn cá nhân</h3></div>
-        <ul class="rlist"><li><b>Ưu điểm:</b> tạo áp lực bám mục tiêu vòng đời; minh bạch trách nhiệm; cơ sở thi đua, khen thưởng.</li><li><b>Rủi ro:</b> NPV/IRR/dòng tiền phụ thuộc yếu tố ngoài tầm kiểm soát cá nhân (giá dầu, địa chất, tỷ giá…) → đánh giá thiếu công bằng, chồng chéo KPI hiện hành.</li></ul>
+    <div class="lux">
+      <div class="lux-card ac-reveal ac-reveal--left" style="--i:2">
+        <div class="lux-card__tag">Phương án 1</div>
+        <h3 class="lux-card__h">Giao bộ KPI vốn riêng — gắn cá nhân</h3>
+        <ul class="lux-list">
+          <li class="ok"><b>Ưu điểm:</b> tạo áp lực bám mục tiêu vòng đời; minh bạch trách nhiệm; cơ sở thi đua, khen thưởng.</li>
+          <li class="no"><b>Rủi ro:</b> NPV/IRR/dòng tiền phụ thuộc yếu tố ngoài tầm kiểm soát cá nhân (giá dầu, địa chất, tỷ giá…) → đánh giá thiếu công bằng, chồng chéo KPI hiện hành.</li>
+        </ul>
       </div>
-      <div class="tv-mid ac-pop" style="--i:3; font-size:clamp(1rem,2.4vw,1.6rem); color:var(--ink-500)">VS</div>
-      <div class="tv-col tv-col--gov ac-reveal ac-reveal--right" style="--i:4; position:relative">
-        <span style="position:absolute; top:-12px; right:14px; background:var(--pvep-green); color:#fff; font-family:var(--font-display); font-weight:800; font-size:.62rem; letter-spacing:.08em; padding:.2rem .7rem; border-radius:99px; box-shadow:0 6px 16px rgba(0,176,80,.3)">KIẾN NGHỊ</span>
-        <div class="tv-col__head"><span class="tv-tag tv-tag--g">Phương án 2</span><h3>Tích hợp vào KPI hiện hành</h3></div>
-        <ul class="rlist rlist--g"><li>Bổ sung <b>baseline theo BCSDV/phê duyệt SDV</b> &amp; lớp đánh giá tác động CV 165 ở cấp dự án/danh mục.</li><li>Tránh chồng chéo &amp; áp lực bất hợp lý lên cá nhân; tận dụng bộ KPI điều hành sẵn có.</li></ul>
+      <div class="lux-vs ac-pop" style="--i:3"><span>VS</span></div>
+      <div class="lux-card lux-card--win ac-reveal ac-reveal--right" style="--i:4">
+        <div class="lux-ribbon">★ KIẾN NGHỊ</div>
+        <div class="lux-card__tag lux-card__tag--g">Phương án 2</div>
+        <h3 class="lux-card__h">Tích hợp vào KPI hiện hành</h3>
+        <ul class="lux-list lux-list--g">
+          <li class="ok">Bổ sung <b>baseline theo BCSDV/phê duyệt SDV</b> &amp; lớp đánh giá tác động CV 165 ở cấp dự án/danh mục.</li>
+          <li class="ok">Tránh chồng chéo &amp; áp lực bất hợp lý lên cá nhân; tận dụng bộ KPI điều hành sẵn có.</li>
+        </ul>
       </div>
     </div>
   </div></div>
@@ -1136,21 +1179,23 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     --content-gap:clamp(.7rem,3vw,1.2rem);
   }
 
-  /* — mỗi slide cao bằng màn hình, cho phép cuộn nội bộ nếu nội dung quá cao — */
+  /* — snap MỀM + để cả trang cuộn tự nhiên: tránh "kẹt" do cuộn lồng (nested scroll)
+       khi nội dung dài hơn màn hình. Slide tự cao theo nội dung. — */
+  html{ scroll-snap-type:y proximity; }
+  .slide{ height:auto; min-height:100vh; min-height:100svh; overflow:visible; }
   .slide-content{
-    justify-content:flex-start;          /* tránh lỗi flexbox cắt đầu khi nội dung cao */
-    overflow-y:auto;
-    -webkit-overflow-scrolling:touch;
+    justify-content:center;
+    overflow:visible; max-height:none;
+    min-height:100vh; min-height:100svh;
     padding-top:clamp(3rem,11vh,4.5rem);   /* chừa chỗ cho bộ đếm góc trên */
     padding-bottom:clamp(2.4rem,9vh,3.6rem);
   }
   .slide-content > .wrap{ margin-block:auto; }   /* căn giữa dọc khi slide đủ ngắn */
-  .slide-content::-webkit-scrollbar{ width:0; height:0; }
   .wrap, .wrap--wide{ width:92%; }
 
   /* — tiêu đề căn giữa gọn hơn — */
   .s-title{ font-size:var(--title-size); }
-  .hero__word{ font-size:clamp(3rem,16vw,5.5rem); }
+  .hero__word{ font-size:clamp(1.9rem,10vw,3.2rem); }
 
   /* — XẾP MỌI LAYOUT NHIỀU CỘT THÀNH 1 CỘT (dọc) — */
   .two-view, .tri, .cards--4, .cards--3, .quad4a,
@@ -1273,7 +1318,118 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 
   /* tránh cắt ngang các thẻ giữa hai trang */
   .card4, .tri__card, .kcard, .ktier, .mlayer, .nxrow, .wcard, .duostat,
-  .lrow, .duo__card, .tv-col, .ritem, .srow{ break-inside:avoid; page-break-inside:avoid; }
+  .lrow, .duo__card, .tv-col, .ritem, .srow,
+  .iz-panel, .lux-card{ break-inside:avoid; page-break-inside:avoid; }
+}
+
+/* ============================================================
+   INTERACTIVE WIDGETS (iz-) — máy chấm điểm · lọc danh mục · truy vết
+   ============================================================ */
+.iz-grid2{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(.8rem,2vw,1.6rem); align-items:stretch; margin-top:clamp(.4rem,1.6vh,1rem); }
+.iz-panel{ background:#fff; border:1px solid var(--ac-line); border-radius:18px; padding:clamp(.9rem,2vw,1.5rem); box-shadow:0 14px 40px rgba(10,42,74,.07); display:flex; flex-direction:column; gap:.5rem; }
+.iz-panel__t{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.84rem,1.5vw,1.05rem); display:flex; align-items:center; gap:.5rem; }
+.iz-panel__t .ti{ width:8px; height:8px; border-radius:50%; background:var(--pvep-blue); flex:none; }
+
+.iz-row{ display:grid; grid-template-columns:1fr auto; gap:.1rem .6rem; align-items:center; }
+.iz-row__lbl{ font-size:var(--small-size); color:var(--ink-700); font-weight:600; line-height:1.2; }
+.iz-row__cap{ font-family:var(--font-display); font-weight:700; font-size:.6rem; color:var(--pvep-blue); background:rgba(0,131,199,.1); border-radius:99px; padding:.05rem .45rem; margin-left:.3rem; white-space:nowrap; }
+.iz-row__val{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.95rem,1.8vw,1.25rem); min-width:2.2em; text-align:right; }
+.iz-range{ grid-column:1 / -1; width:100%; height:20px; -webkit-appearance:none; appearance:none; background:transparent; cursor:pointer; margin:.05rem 0 .15rem; }
+.iz-range::-webkit-slider-runnable-track{ height:7px; border-radius:99px; border:1px solid var(--ac-line); background:linear-gradient(90deg,var(--pvep-blue) var(--p,50%), var(--bg-100) var(--p,50%)); }
+.iz-range::-webkit-slider-thumb{ -webkit-appearance:none; width:18px; height:18px; margin-top:-7px; border-radius:50%; background:#fff; border:3px solid var(--pvep-blue); box-shadow:0 3px 8px rgba(0,131,199,.35); }
+.iz-range::-moz-range-track{ height:7px; border-radius:99px; border:1px solid var(--ac-line); background:var(--bg-100); }
+.iz-range::-moz-range-progress{ height:9px; border-radius:99px; background:var(--pvep-blue); }
+.iz-range::-moz-range-thumb{ width:18px; height:18px; border-radius:50%; background:#fff; border:3px solid var(--pvep-blue); box-shadow:0 3px 8px rgba(0,131,199,.35); }
+.iz-range--g::-webkit-slider-runnable-track{ background:linear-gradient(90deg,var(--pvep-green) var(--p,50%), var(--bg-100) var(--p,50%)); }
+.iz-range--g::-webkit-slider-thumb{ border-color:var(--pvep-green); }
+.iz-range--g::-moz-range-progress{ background:var(--pvep-green); }
+.iz-range--g::-moz-range-thumb{ border-color:var(--pvep-green); }
+.iz-div{ height:1px; background:var(--ac-line); margin:.3rem 0; border:0; }
+
+/* result ring */
+.iz-result{ align-items:center; justify-content:center; text-align:center; }
+.iz-ring{ width:clamp(140px,18vw,200px); height:auto; }
+.iz-ring__track{ fill:none; stroke:var(--bg-100); stroke-width:15; }
+.iz-ring__val{ fill:none; stroke:var(--pvep-blue); stroke-width:15; stroke-linecap:round; transition:stroke-dashoffset .55s var(--ac-ease), stroke .4s; }
+.iz-ring__num{ font-family:var(--font-display); font-weight:800; fill:var(--pvep-navy); }
+.iz-badge{ font-family:var(--font-display); font-weight:800; font-size:clamp(.88rem,1.7vw,1.2rem); padding:.32rem 1.1rem; border-radius:99px; color:#fff; box-shadow:0 8px 22px rgba(10,42,74,.18); transition:background .35s; margin-top:.3rem; }
+.iz-traffic{ display:flex; gap:.5rem; align-items:center; justify-content:center; margin-top:.45rem; }
+.iz-lamp{ width:17px; height:17px; border-radius:50%; opacity:.2; transition:opacity .3s, box-shadow .3s; }
+.iz-lamp--r{ background:var(--danger); } .iz-lamp--y{ background:var(--caution); } .iz-lamp--g{ background:var(--success); }
+.iz-lamp.on{ opacity:1; }
+.iz-lamp--r.on{ box-shadow:0 0 0 5px rgba(220,38,38,.18); }
+.iz-lamp--y.on{ box-shadow:0 0 0 5px rgba(217,119,6,.18); }
+.iz-lamp--g.on{ box-shadow:0 0 0 5px rgba(21,128,61,.18); }
+.iz-tiers{ display:flex; flex-direction:column; gap:.28rem; width:100%; margin-top:.5rem; }
+.iz-tier{ display:flex; align-items:center; gap:.55rem; padding:.3rem .7rem; border-radius:10px; border:1px solid var(--ac-line); background:#fff; opacity:.45; transition:opacity .3s, transform .3s, box-shadow .3s; font-size:var(--small-size); }
+.iz-tier b{ font-family:var(--font-display); min-width:3.2em; }
+.iz-tier.on{ opacity:1; transform:translateX(3px); box-shadow:0 8px 20px rgba(10,42,74,.1); }
+.iz-tier--1{ border-left:5px solid var(--pvep-green); } .iz-tier--1 b{ color:var(--pvep-green); }
+.iz-tier--2{ border-left:5px solid var(--pvep-blue); } .iz-tier--2 b{ color:var(--pvep-blue); }
+.iz-tier--3{ border-left:5px solid var(--caution); } .iz-tier--3 b{ color:var(--caution); }
+.iz-tier--4{ border-left:5px solid var(--danger); } .iz-tier--4 b{ color:var(--danger); }
+.iz-split{ font-family:var(--font-display); font-weight:800; } .iz-split .t{ color:var(--pvep-blue); } .iz-split .p{ color:var(--pvep-green); }
+
+/* segmented control */
+.iz-seg{ display:inline-flex; background:var(--bg-100); border:1px solid var(--ac-line); border-radius:99px; padding:.22rem; gap:.2rem; flex-wrap:wrap; justify-content:center; }
+.iz-seg button{ font-family:var(--font-display); font-weight:700; font-size:clamp(.7rem,1.3vw,.92rem); color:var(--ink-600); background:transparent; border:0; border-radius:99px; padding:.42rem .95rem; cursor:pointer; transition:background .25s,color .25s,box-shadow .25s; }
+.iz-seg button.on{ background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); color:#fff; box-shadow:0 6px 16px rgba(0,131,199,.28); }
+
+/* BCG matrix */
+.iz-bcg{ position:relative; width:100%; aspect-ratio:1/1; max-width:clamp(220px,30vh,300px); margin:.2rem auto 0; border:1px solid var(--ac-line); border-radius:14px; overflow:hidden; background:linear-gradient(135deg,rgba(0,131,199,.05),rgba(0,176,80,.05)); }
+.iz-bcg__q{ position:absolute; width:50%; height:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.05rem; font-family:var(--font-display); font-weight:800; font-size:clamp(.66rem,1.3vw,.85rem); text-align:center; padding:.2rem; }
+.iz-bcg__q small{ font-size:.56rem; font-weight:600; opacity:.75; }
+.iz-bcg__q.q-question{ left:0; top:0; color:var(--caution); }
+.iz-bcg__q.q-star{ left:50%; top:0; color:var(--success); }
+.iz-bcg__q.q-dog{ left:0; top:50%; color:var(--danger); }
+.iz-bcg__q.q-cow{ left:50%; top:50%; color:var(--pvep-blue); }
+.iz-bcg__line{ position:absolute; background:var(--ac-line); z-index:1; }
+.iz-bcg__line.h{ left:0; right:0; top:50%; height:1px; } .iz-bcg__line.v{ top:0; bottom:0; left:50%; width:1px; }
+.iz-bcg__dot{ position:absolute; width:18px; height:18px; border-radius:50%; background:var(--pvep-navy); border:3px solid #fff; box-shadow:0 4px 12px rgba(10,42,74,.4); transform:translate(-50%,50%); transition:left .45s var(--ac-ease), bottom .45s var(--ac-ease), background .35s; z-index:3; }
+.iz-bcg__axis{ position:absolute; font-size:.52rem; font-weight:700; color:var(--ink-500); text-transform:uppercase; letter-spacing:.05em; z-index:2; pointer-events:none; }
+.iz-bcg__axis.x{ bottom:3px; right:5px; } .iz-bcg__axis.y{ top:5px; left:4px; writing-mode:vertical-rl; }
+
+/* nexus trace */
+.iz-trace{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1.1fr); gap:clamp(.5rem,1.8vw,1.4rem); align-items:center; margin-top:clamp(.4rem,1.6vh,1rem); }
+.iz-causes{ display:flex; flex-direction:column; gap:.45rem; }
+.iz-cause{ text-align:left; font-family:var(--font-display); font-weight:700; font-size:var(--small-size); color:var(--ink-700); background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--danger); border-radius:12px; padding:.6rem .85rem; cursor:pointer; transition:transform .25s, box-shadow .25s, border-color .25s, background .25s; }
+.iz-cause:hover{ transform:translateX(3px); }
+.iz-cause.on{ background:linear-gradient(135deg,rgba(220,38,38,.09),rgba(234,88,12,.05)); border-color:var(--danger); box-shadow:0 10px 26px rgba(220,38,38,.18); transform:translateX(4px); }
+.iz-trace__mid{ display:flex; align-items:center; justify-content:center; color:var(--ink-500); font-size:clamp(1.2rem,3vw,2rem); }
+.iz-tgts{ display:flex; flex-wrap:wrap; gap:.45rem; align-content:flex-start; }
+.iz-tgt{ font-family:var(--font-display); font-weight:700; font-size:var(--small-size); color:var(--ink-500); background:#fff; border:1px solid var(--ac-line); border-radius:99px; padding:.4rem .9rem; transition:all .3s; opacity:.4; }
+.iz-tgt.is-on{ opacity:1; color:#fff; background:linear-gradient(135deg,var(--pvep-blue),var(--pvep-green)); border-color:transparent; box-shadow:0 8px 20px rgba(0,131,199,.28); transform:translateY(-2px); }
+.iz-tgt.is-dim{ opacity:.3; }
+.iz-hint{ font-size:.74rem; color:var(--ink-500); text-align:center; margin-top:.7rem; max-width:70ch; margin-inline:auto; line-height:1.4; }
+.iz-hint b{ color:var(--ink-700); }
+
+/* ===== Slide 15 — thiết kế cao cấp (lux) ===== */
+.lux{ display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(.6rem,2vw,1.6rem); align-items:stretch; margin-top:clamp(.6rem,2.4vh,1.6rem); }
+.lux-card{ position:relative; background:linear-gradient(180deg,#fff,#fbfdff); border:1px solid var(--ac-line); border-radius:22px; padding:clamp(1.1rem,2.6vw,2rem); box-shadow:0 18px 48px rgba(10,42,74,.08); overflow:hidden; transition:transform .3s, box-shadow .3s; }
+.lux-card:hover{ transform:translateY(-4px); }
+.lux-card::before{ content:""; position:absolute; left:0; right:0; top:0; height:5px; background:linear-gradient(90deg,var(--ink-500),var(--ink-700)); opacity:.45; }
+.lux-card--win{ border-color:rgba(0,176,80,.5); box-shadow:0 26px 70px rgba(0,176,80,.18); background:linear-gradient(180deg,#fff,#f3fff8); }
+.lux-card--win::before{ background:linear-gradient(90deg,var(--pvep-blue),var(--pvep-green)); opacity:1; height:6px; }
+.lux-card__tag{ font-family:var(--font-display); font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:.66rem; color:var(--ink-500); }
+.lux-card__tag--g{ color:var(--pvep-green); }
+.lux-card__h{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(1.05rem,2.2vw,1.6rem); line-height:1.15; margin:.35rem 0 .9rem; }
+.lux-card--win .lux-card__h{ color:var(--pvep-blue); }
+.lux-list{ list-style:none; display:flex; flex-direction:column; gap:.7rem; }
+.lux-list li{ position:relative; padding-left:1.8rem; font-size:var(--body-size); color:var(--ink-600); line-height:1.4; }
+.lux-list li::before{ content:""; position:absolute; left:0; top:.1em; width:1.25rem; height:1.25rem; border-radius:50%; display:grid; place-content:center; font-size:.72rem; font-weight:800; color:#fff; }
+.lux-list li.ok::before{ content:"✓"; background:var(--pvep-green); }
+.lux-list li.no::before{ content:"!"; background:var(--caution); }
+.lux-list li b{ color:var(--pvep-navy); }
+.lux-vs{ display:flex; align-items:center; justify-content:center; }
+.lux-vs span{ width:clamp(46px,6vw,68px); height:clamp(46px,6vw,68px); border-radius:50%; display:grid; place-content:center; font-family:var(--font-display); font-weight:800; font-size:clamp(.9rem,2vw,1.3rem); color:var(--pvep-navy); background:#fff; border:1px solid var(--ac-line); box-shadow:0 10px 26px rgba(10,42,74,.12); }
+.lux-ribbon{ position:absolute; top:15px; right:-36px; transform:rotate(45deg); background:linear-gradient(135deg,var(--pvep-green),#0a7d3a); color:#fff; font-family:var(--font-display); font-weight:800; font-size:.62rem; letter-spacing:.08em; padding:.32rem 2.8rem; box-shadow:0 6px 16px rgba(0,176,80,.35); }
+
+@media (max-width:768px){
+  .iz-grid2{ grid-template-columns:1fr; }
+  .iz-trace{ grid-template-columns:1fr; }
+  .iz-trace__mid{ transform:rotate(90deg); }
+  .lux{ grid-template-columns:1fr; }
+  .lux-vs{ transform:rotate(90deg); }
 }
 </style>
 
@@ -1461,6 +1617,111 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     var mq = window.matchMedia("print");
     (mq.addEventListener ? mq.addEventListener.bind(mq,"change") : mq.addListener.bind(mq))(function(e){ if (e.matches) prep(); });
   }
+})();
+
+/* =====================================================================
+   INTERACTIVE WIDGETS — máy chấm điểm DADK · lọc trọng số danh mục · truy vết CV165
+   ===================================================================== */
+(function(){
+  "use strict";
+  var $  = function(s,r){ return (r||document).querySelector(s); };
+  var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+  function paint(rng){ var mn=+rng.min, mx=+rng.max; rng.style.setProperty('--p', ((rng.value-mn)/(mx-mn)*100)+'%'); }
+
+  /* ---------- A. Máy chấm điểm DADK ---------- */
+  (function(){
+    var host=$('#scComp'); if(!host) return;
+    var COMP=[{n:'Chỉ tiêu KPI',max:30},{n:'Nhiệm vụ trọng tâm',max:30},{n:'Mức đóng góp KQ SXKD',max:20},{n:'Tuân thủ & phối hợp',max:10},{n:'Sự trưởng thành Dự án',max:10}];
+    COMP.forEach(function(c,i){
+      var def=Math.round(c.max*0.9);
+      var row=document.createElement('div'); row.className='iz-row';
+      row.innerHTML='<span class="iz-row__lbl">'+c.n+'<span class="iz-row__cap">tối đa '+c.max+'</span></span>'+
+        '<span class="iz-row__val" data-v="'+i+'">'+def+'</span>'+
+        '<input class="iz-range" type="range" min="0" max="'+c.max+'" value="'+def+'" data-c="'+i+'">';
+      host.appendChild(row);
+    });
+    var comps=$$('input',host), ptg=$('#scPtg'), wsl=$('#scW'),
+        ring=$('#scRing'), num=$('#scNum'), badge=$('#scBadge'),
+        lamps=$$('#scLamp .iz-lamp'), tiers=$$('#scTiers .iz-tier');
+    var CIRC=2*Math.PI*80; ring.setAttribute('stroke-dasharray',CIRC);
+    function tierOf(s){ return s>=95?{t:1,txt:'Hoàn thành xuất sắc',col:'#15803D'}:
+                              s>=80?{t:2,txt:'Hoàn thành tốt',col:'#0083C7'}:
+                              s>=50?{t:3,txt:'Hoàn thành',col:'#D97706'}:
+                                    {t:4,txt:'Không hoàn thành',col:'#DC2626'}; }
+    function calc(){
+      var s1=0;
+      comps.forEach(function(r){ s1+=(+r.value); var l=host.querySelector('.iz-row__val[data-v="'+r.dataset.c+'"]'); if(l)l.textContent=r.value; paint(r); });
+      var s2=+ptg.value, wT=+wsl.value, wP=100-wT;
+      $('#scPtgVal').textContent=s2; $('#scWT').textContent=wT+'%'; $('#scWP').textContent=wP+'%'; paint(ptg); paint(wsl);
+      var fin=Math.round((wT*s1+wP*s2)/100), ti=tierOf(fin);
+      num.textContent=fin; num.style.fill=ti.col;
+      ring.style.strokeDashoffset=CIRC*(1-fin/100); ring.style.stroke=ti.col;
+      badge.textContent=ti.txt; badge.style.background=ti.col;
+      var li=ti.t<=2?0:(ti.t===3?1:2);
+      lamps.forEach(function(l,idx){ l.classList.toggle('on',idx===li); });
+      tiers.forEach(function(el){ el.classList.toggle('on', el.classList.contains('iz-tier--'+ti.t)); });
+    }
+    comps.forEach(function(r){ r.addEventListener('input',calc); });
+    ptg.addEventListener('input',calc); wsl.addEventListener('input',calc);
+    calc();
+  })();
+
+  /* ---------- B. Bộ lọc trọng số danh mục + BCG ---------- */
+  (function(){
+    var seg=$('#portSeg'); if(!seg) return;
+    var crit=$('#portCrit'), dot=$('#portDot'), scoreEl=$('#portScore'),
+        badge=$('#portBadge'), lamps=$$('#portLamp .iz-lamp');
+    var DATA={
+      tktd:[['Tiềm năng dầu khí thu hồi',35,'y'],['Hệ số thành công POS',15,'y'],['Thị trường tiêu thụ',15,'y'],['Chiến lược & khả năng triển khai',15,'x'],['Chi phí / Khác',20,'x']],
+      ptr:[['NPV@IRRmin',30,'y'],['Trữ lượng thu hồi KT',20,'y'],['Mức kiểm soát rủi ro',20,'x'],['Capex/thùng (cạnh tranh)',12.5,'x'],['Opex/thùng · P/I',17.5,'x']],
+      kt:[['Dòng tiền chiết khấu tiếp theo',30,'y'],['Trữ lượng còn lại',20,'y'],['Đơn giá khai thác UPC',20,'x'],['Sản lượng TB năm còn lại',20,'x'],['NCF/Tổng chi phí LF',10,'x']]
+    };
+    var QMAP={Star:'#15803D',Cow:'#0083C7',Question:'#D97706',Dog:'#DC2626'};
+    var cur='tktd', inputs=[];
+    function build(type){
+      cur=type; crit.innerHTML=''; inputs=[];
+      DATA[type].forEach(function(c,i){
+        var row=document.createElement('div'); row.className='iz-row';
+        row.innerHTML='<span class="iz-row__lbl">'+c[0]+'<span class="iz-row__cap">'+String(c[1]).replace('.',',')+'%</span></span>'+
+          '<span class="iz-row__val" data-v="'+i+'">7</span>'+
+          '<input class="iz-range" type="range" min="0" max="10" step="1" value="7" data-i="'+i+'">';
+        crit.appendChild(row);
+        var inp=row.querySelector('input'); inp.addEventListener('input',calc); inputs.push(inp);
+      });
+      calc();
+    }
+    function calc(){
+      var rows=DATA[cur], tot=0, xs=0, xw=0, ys=0, yw=0;
+      inputs.forEach(function(inp,i){
+        var v=+inp.value, w=rows[i][1], ax=rows[i][2];
+        var l=crit.querySelector('.iz-row__val[data-v="'+i+'"]'); if(l)l.textContent=v; paint(inp);
+        tot+=w*v/10;
+        if(ax==='x'){ xs+=w*v/10; xw+=w; } else { ys+=w*v/10; yw+=w; }
+      });
+      var Xp=xw?(xs/xw*100):50, Yp=yw?(ys/yw*100):50, total=Math.round(tot);
+      var q=Yp>=50?(Xp>=50?'Star':'Question'):(Xp>=50?'Cow':'Dog');
+      scoreEl.textContent=total;
+      badge.textContent=q; badge.style.background=QMAP[q];
+      dot.style.left=Xp+'%'; dot.style.bottom=Yp+'%'; dot.style.background=QMAP[q];
+      var li=total>=70?0:(total>=50?1:2);
+      lamps.forEach(function(l,idx){ l.classList.toggle('on',idx===li); });
+    }
+    $$('button',seg).forEach(function(b){ b.addEventListener('click',function(){ $$('button',seg).forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); build(b.dataset.type); }); });
+    build('tktd');
+  })();
+
+  /* ---------- C. Truy vết liên kết CV 165 ---------- */
+  (function(){
+    var trace=$('#trace'); if(!trace) return;
+    var causes=$$('.iz-cause',trace), tgts=$$('.iz-tgt',trace);
+    function apply(btn){
+      causes.forEach(function(c){ c.classList.toggle('on',c===btn); });
+      var set=(btn.getAttribute('data-tg')||'').split(',');
+      tgts.forEach(function(t){ var on=set.indexOf(t.getAttribute('data-k'))>=0; t.classList.toggle('is-on',on); t.classList.toggle('is-dim',!on); });
+    }
+    causes.forEach(function(c){ c.addEventListener('click',function(){ apply(c); }); });
+    apply(causes[0]);
+  })();
 })();
 </script>
 </body>
