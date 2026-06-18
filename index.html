@@ -1639,16 +1639,34 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     var slides = document.querySelectorAll(SLIDE_SELECTOR); if (!slides.length) return;
     var allNums = document.querySelectorAll("[data-count-to]"); for (var n=0;n<allNums.length;n++) resetCount(allNums[n]);
     if (!("IntersectionObserver" in window)){ for (var k=0;k<slides.length;k++) activate(slides[k]); return; }
+    // Kích hoạt theo "vạch giữa khung nhìn" (rootMargin) thay vì theo tỷ lệ %.
+    // Lý do: slide cao gấp 2–3 lần màn hình (điện thoại) KHÔNG bao giờ đạt 55%
+    // diện tích → cách cũ không hiện nội dung. Vạch giữa thì đúng cho MỌI chiều cao.
     var io = new IntersectionObserver(function (entries){
       entries.forEach(function (e){
-        // Slide cao hơn màn hình (điện thoại / cửa sổ thấp) không bao giờ đạt 55%
-        // → kích hoạt thêm khi slide LẤP ĐẦY ≥60% chiều cao khung nhìn.
-        var fills = e.intersectionRect.height >= (window.innerHeight || 0) * 0.6;
-        if (e.isIntersecting && (e.intersectionRatio >= VISIBLE_RATIO || fills)) activate(e.target);
-        else if (!e.isIntersecting) deactivate(e.target);   // chỉ tắt khi ra hẳn khỏi tầm nhìn
+        if (e.isIntersecting) activate(e.target);
+        else deactivate(e.target);
       });
-    }, { threshold: [0, 0.25, VISIBLE_RATIO, 1] });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
     for (var s=0;s<slides.length;s++) io.observe(slides[s]);
+
+    // AN TOÀN (không phụ thuộc IntersectionObserver): mỗi khi cuộn, slide nào
+    // đang cắt qua giữa màn hình thì BẮT BUỘC kích hoạt. Bảo đảm không có slide
+    // nào bị trắng dù IO kích hoạt trễ/không chạy. (scroll dùng capture vì phần
+    // tử cuộn là <body>, sự kiện scroll không nổi bọt lên window.)
+    var ticking = false;
+    function activateCentered(){
+      ticking = false;
+      var cy = (window.innerHeight || document.documentElement.clientHeight) / 2;
+      for (var i=0;i<slides.length;i++){
+        var r = slides[i].getBoundingClientRect();
+        if (r.top <= cy && r.bottom >= cy){ activate(slides[i]); break; }
+      }
+    }
+    function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(activateCentered); } }
+    window.addEventListener("scroll", onScroll, { passive:true, capture:true });
+    window.addEventListener("resize", onScroll, { passive:true });
+    activateCentered();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
@@ -1681,12 +1699,9 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   // Track the slide currently in view (covers manual scroll / swipe)
   var io2 = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      var fills = e.intersectionRect.height >= (window.innerHeight || 0) * 0.6;
-      if (e.isIntersecting && (e.intersectionRatio >= 0.55 || fills)){
-        var idx = slides.indexOf(e.target); if (idx >= 0) setCurrent(idx);
-      }
+      if (e.isIntersecting){ var idx = slides.indexOf(e.target); if (idx >= 0) setCurrent(idx); }
     });
-  }, { threshold: [0, 0.25, 0.55] });
+  }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
   slides.forEach(function(s){ io2.observe(s); });
 
   document.addEventListener("keydown", function(e){
