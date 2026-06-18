@@ -674,38 +674,40 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 .ktier--in .ktier__by{ color:var(--caution); background:rgba(217,119,6,.12); }
 
 /* infographic kmap */
-.kmap{ display:grid; grid-template-columns:1fr .82fr 1fr; gap:clamp(.5rem,1.4vw,1.05rem); align-items:start; margin-top:clamp(.3rem,1.4vh,.9rem); }
-.kmap__ch{ display:flex; align-items:baseline; gap:.45rem; margin-bottom:.5rem; }
-.kmap__ix{ font-family:var(--font-display); font-weight:800; color:var(--caution); font-size:1rem; }
-.kmap__tt{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(.8rem,1.4vw,1.05rem); }
-.kmap__io{ margin-left:auto; font-size:.55rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:.12rem .5rem; border-radius:99px; white-space:nowrap; }
+.kmap{ display:grid; grid-template-columns:1fr .82fr 1fr; gap:clamp(.7rem,1.8vw,1.5rem); align-items:start; margin-top:clamp(.5rem,2vh,1.3rem); }
+.kmap__ch{ display:flex; align-items:baseline; gap:.5rem; margin-bottom:.6rem; }
+.kmap__ix{ font-family:var(--font-display); font-weight:800; color:var(--caution); font-size:1.25rem; }
+.kmap__tt{ font-family:var(--font-display); font-weight:800; color:var(--pvep-navy); font-size:clamp(1rem,1.7vw,1.4rem); }
+.kmap__io{ margin-left:auto; font-size:.66rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; padding:.16rem .6rem; border-radius:99px; white-space:nowrap; }
 .io-in{ background:rgba(217,119,6,.15); color:var(--caution); }
 .io-out{ background:rgba(0,131,199,.13); color:var(--pvep-blue); }
-.kmcol{ display:flex; flex-direction:column; gap:.4rem; }
-.kcard{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvep-blue); border-radius:12px; padding:.5rem .7rem; box-shadow:0 6px 18px rgba(10,42,74,.05); }
-.kcard__top{ display:flex; align-items:center; gap:.45rem; }
-.kcard__num{ width:19px;height:19px;border-radius:50%;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.66rem;display:grid;place-content:center;flex:none; }
-.kcard__name{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.66rem,1.15vw,.9rem); line-height:1.06; }
-.kcard__by{ margin-left:auto; font-size:.55rem; font-weight:700; color:var(--ink-500); white-space:nowrap; }
-.kchips{ display:flex; flex-wrap:wrap; gap:.22rem; margin-top:.3rem; }
-.kchip{ font-size:.55rem; font-weight:600; background:var(--bg-100); border:1px solid var(--ac-line); border-radius:99px; padding:.08rem .42rem; color:var(--ink-700); }
+.kmcol{ display:flex; flex-direction:column; gap:.55rem; }
+.kcard{ background:#fff; border:1px solid var(--ac-line); border-left:4px solid var(--pvep-blue); border-radius:12px; padding:.62rem .9rem; box-shadow:0 6px 18px rgba(10,42,74,.05); }
+.kcard__top{ display:flex; align-items:center; gap:.5rem; }
+.kcard__num{ width:24px;height:24px;border-radius:50%;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.8rem;display:grid;place-content:center;flex:none; }
+.kcard__name{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.82rem,1.35vw,1.15rem); line-height:1.1; }
+.kcard__by{ margin-left:auto; font-size:.68rem; font-weight:700; color:var(--ink-500); white-space:nowrap; line-height:1.18; text-align:right; }
+.kchips{ display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.38rem; }
+.kchip{ font-size:.68rem; font-weight:600; background:var(--bg-100); border:1px solid var(--ac-line); border-radius:99px; padding:.12rem .55rem; color:var(--ink-700); }
 .kcard--in{ border-left-color:var(--caution); background:linear-gradient(180deg,#FFFBF3,#fff); }
 .kcard--in .kcard__num{ background:var(--caution); }
-.ksub{ display:flex; gap:.32rem; margin-top:.3rem; }
-.ksub>div{ flex:1; background:var(--bg-100); border:1px dashed var(--ac-line); border-radius:8px; padding:.3rem .42rem; }
-.ksub h6{ font-size:.55rem; font-weight:800; color:var(--pvep-blue); margin-bottom:.1rem; }
-.ksub p{ font-size:.53rem; color:var(--ink-700); line-height:1.18; }
-.kgt{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.66rem,1.15vw,.88rem); display:flex; align-items:center; gap:.4rem; }
-.kgt .kd{ width:7px;height:7px;border-radius:50%;background:var(--pvep-blue);flex:none; }
+.ksub{ display:flex; gap:.4rem; margin-top:.38rem; }
+.ksub>div{ flex:1; display:flex; flex-direction:column; align-items:flex-start; background:var(--bg-100); border:1px dashed var(--ac-line); border-radius:8px; padding:.42rem .55rem; }
+.ksub h6{ font-size:.68rem; font-weight:800; color:var(--pvep-blue); margin-bottom:.15rem; }
+.ksub p{ font-size:.66rem; color:var(--ink-700); line-height:1.22; }
+.kby{ display:inline-block; margin-top:.3rem; font-family:var(--font-display); font-weight:700; font-size:.66rem; color:var(--pvep-blue); background:rgba(0,131,199,.12); border-radius:99px; padding:.06rem .55rem; }
+.kgt{ font-family:var(--font-display); font-weight:700; color:var(--pvep-navy); font-size:clamp(.82rem,1.35vw,1.12rem); display:flex; align-items:center; gap:.45rem; }
+.kgt .kd{ width:8px;height:8px;border-radius:50%;background:var(--pvep-blue);flex:none; }
+.kbadge{ margin-left:auto; font-family:var(--font-display); font-weight:700; font-size:.64rem; color:var(--warning); background:rgba(234,88,12,.12); border:1px solid rgba(234,88,12,.35); border-radius:99px; padding:.04rem .5rem; white-space:nowrap; }
 .kcard--in .kgt .kd{ background:var(--caution); }
 .kflow{ display:flex; flex-direction:column; align-items:center; }
-.kstep{ width:100%; background:#fff; border:1px solid var(--ac-line); border-radius:10px; padding:.32rem .55rem; text-align:center; font-size:clamp(.58rem,.95vw,.78rem); font-weight:600; color:var(--ink-700); line-height:1.14; }
-.kstep .kl{ display:block; font-size:.5rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-500); margin-bottom:.02rem; }
+.kstep{ width:100%; background:#fff; border:1px solid var(--ac-line); border-radius:10px; padding:.42rem .65rem; text-align:center; font-size:clamp(.74rem,1.15vw,1rem); font-weight:600; color:var(--ink-700); line-height:1.2; }
+.kstep .kl{ display:block; font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-500); margin-bottom:.04rem; }
 .kstep--in{ border-color:var(--caution); background:#FFFBF3; }
 .kstep--impact{ border-color:var(--pvep-blue); background:rgba(0,131,199,.05); }
-.karrow{ color:var(--caution); font-size:.72rem; line-height:1; margin:.06rem 0; }
+.karrow{ color:var(--caution); font-size:.9rem; line-height:1; margin:.1rem 0; }
 .ksem{ width:100%; display:grid; grid-template-columns:repeat(3,1fr); border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(10,42,74,.08); }
-.ksem>span{ padding:.3rem .2rem; text-align:center; color:#fff; font-weight:800; font-size:.54rem; line-height:1.08; }
+.ksem>span{ padding:.38rem .25rem; text-align:center; color:#fff; font-weight:800; font-size:.68rem; line-height:1.12; }
 .ksem .g{ background:var(--success);} .ksem .y{ background:var(--caution);} .ksem .r{ background:var(--danger);}
 
 /* nexus cause -> impact */
@@ -811,13 +813,18 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 
 /* B. governance stack (Sáu tầng) */
 .gstack{ display:flex; flex-direction:column; gap:.36rem; max-width:1240px; margin:.3rem auto 0; }
-.glayer{ display:grid; grid-template-columns:auto 1.25fr 1fr; align-items:center; gap:.9rem; background:#fff;border:1px solid var(--ac-line);border-left:5px solid var(--pvep-blue);border-radius:13px;padding:.5rem .9rem;box-shadow:0 8px 22px rgba(10,42,74,.05); }
-.glayer__n{ width:30px;height:30px;border-radius:9px;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;display:grid;place-content:center;flex:none;font-size:.9rem; }
+.glayer{ display:grid; grid-template-columns:auto 1.25fr 1fr; align-items:center; gap:1rem; background:#fff;border:1px solid var(--ac-line);border-left:5px solid var(--pvep-blue);border-radius:13px;padding:.6rem 1rem;box-shadow:0 8px 22px rgba(10,42,74,.05); position:relative; z-index:1; }
+.gstack .glayer:nth-child(1){ z-index:10; } /* ensure overlap over layer 2 */
+.glayer__n{ width:34px;height:34px;border-radius:9px;background:var(--pvep-navy);color:#fff;font-family:var(--font-display);font-weight:800;display:grid;place-content:center;flex:none;font-size:1.05rem; }
 .glayer__main{ min-width:0; }
-.glayer__t{ font-family:var(--font-display);font-weight:800;color:var(--pvep-navy);font-size:clamp(.84rem,1.5vw,1.08rem);line-height:1.12; }
-.glayer__r{ color:var(--ink-600);font-size:var(--small-size);line-height:1.24;margin-top:.05rem; }
-.glayer__gap{ display:flex;align-items:flex-start;gap:.4rem;color:var(--ink-600);font-size:.72rem;line-height:1.24; }
-.glayer__gap::before{ content:"";width:7px;height:7px;border-radius:50%;background:var(--caution);flex:none;margin-top:.4em; }
+.glayer__t{ font-family:var(--font-display);font-weight:800;color:var(--pvep-navy);font-size:clamp(1.02rem,1.9vw,1.4rem);line-height:1.14; }
+.glayer__r{ color:var(--ink-600);font-size:clamp(.82rem,1.4vw,1.08rem);line-height:1.26;margin-top:.08rem; }
+.glayer__gap{ display:flex;align-items:flex-start;gap:.45rem;color:var(--ink-600);font-size:clamp(.82rem,1.3vw,1.04rem);line-height:1.26; }
+.glayer__gap::before{ content:"";width:8px;height:8px;border-radius:50%;background:var(--caution);flex:none;margin-top:.4em; }
+/* merged gap note: 1 ghi chú dùng chung cho tầng 1 & 2, kéo xuống ranh giới giữa 2 hàng */
+.glayer__gap--merge{ position:relative; padding-left:1.2rem; transform:translateY(calc(50% + 0.18rem)); z-index:2; }
+.glayer__gap--merge::before{ content:""; position:absolute; left:-0.5rem; right:-1rem; top:-1.5rem; bottom:-1.5rem; background:#fff; z-index:-1; }
+.glayer__gap--merge::after{ content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); height:calc(100% + 1rem); width:8px; border:2px solid var(--caution); border-right:0; border-radius:8px 0 0 8px; opacity:.5; }
 .glayer--g{ border-left-color:var(--pvep-green); } .glayer--g .glayer__n{ background:var(--pvep-green); }
 .glayer--b{ border-left-color:var(--pvep-blue); } .glayer--b .glayer__n{ background:var(--pvep-blue); }
 
@@ -928,10 +935,10 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     <div class="eyebrow ac-reveal" style="--i:1">Báo cáo · Ban Kiểm soát Nội bộ PVEP</div>
     <h1 class="hero__word ac-reveal" style="--i:2">Hệ thống KPI</h1>
     <div class="hero__amp ac-reveal" style="--i:3">CẤU TRÚC QUẢN LÝ HOẠT ĐỘNG PVEP</div>
-    <p class="hero__tag jtype" data-text="Hiện trạng hệ thống chỉ tiêu, hướng quản trị theo baseline và giám sát hiệu quả sử dụng vốn theo CV 165">&nbsp;</p>
-    <div class="hero__by ac-reveal" style="--i:5">Ban Kiểm soát Nội bộ, Tổng Công ty Thăm dò Khai thác Dầu khí (PVEP)</div>
+    <p class="hero__tag jtype" style="color: white;" data-text="Hiện trạng hệ thống chỉ tiêu, hướng quản trị theo baseline và giám sát hiệu quả sử dụng vốn theo CV 165">&nbsp;</p>
+    <div class="hero__by ac-reveal" style="--i:5; color: white;">Ban Kiểm soát Nội bộ, Tổng Công ty Thăm dò Khai thác Dầu khí (PVEP)</div>
     <div class="badge-row ac-reveal" style="--i:6; margin-top:1.2rem">
-      <span class="chip">CV 165/TGĐ</span><span class="chip">QĐ 860 · QLDA</span><span class="chip">QĐ 1894</span><span class="chip">QĐ 1200 · 1347</span>
+      <span class="chip">CV 165/CVNB-HXD ngày 15/5/2026</span><span class="chip">QĐ 860 · Quy chế QLDA</span><span class="chip">QĐ 1894 Tiêu chí đánh giá DADK</span><span class="chip">QĐ 1200 và QĐ 1347 Tiêu chí đánh giá, Quản trị danh mục đầu tư</span>
     </div>
   </div></div>
 </section>
@@ -944,11 +951,11 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
       <h2 class="s-title ac-reveal" style="--i:1">Thông điệp chính</h2>
     </div>
     <div class="vtl">
-      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:2"><span class="vtl__dot">1</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></svg><div class="vtl__tx">PVEP đã có <b>nền tảng chỉ tiêu tương đối đầy đủ</b> ở nhiều cấp, từ chiến lược đến quản trị danh mục đầu tư.</div></div></div>
-      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:3"><span class="vtl__dot">2</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 4 8"/><path d="m2 2 20 20"/></svg><div class="vtl__tx">Các tầng chỉ tiêu <b>chưa liên kết thành chuỗi khép kín</b>: kết quả ở tầng dưới chưa phản hồi đầy đủ lên tầng trên.</div></div></div>
-      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:4"><span class="vtl__dot">3</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17h6v-6"/><path d="m22 17-8.5-8.5-5 5L2 7"/></svg><div class="vtl__tx">Một dự án có thể <b>đạt KPI năm nhưng hiệu quả cả vòng đời vẫn suy giảm</b> nếu trữ lượng, sản lượng, chi phí, tiến độ hoặc phương án vốn thay đổi.</div></div></div>
-      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:5"><span class="vtl__dot">4</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><div class="vtl__tx"><b>CV 165 nên được định vị là lớp đo tác động tài chính</b> của việc thực hiện KPI, không phải bộ KPI điều hành thứ hai.</div></div></div>
-      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:6"><span class="vtl__dot">5</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg><div class="vtl__tx"><b>Kiến nghị:</b> chuyển dần từ mô hình giao chỉ tiêu và chấm điểm sang quản trị theo baseline, dự báo, cảnh báo và lượng hóa tác động.</div></div></div>
+      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:2"><span class="vtl__dot">1</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></svg><div class="vtl__tx" style="font-size:1.15rem; line-height:1.5;">PVEP đã có <b>nền tảng chỉ tiêu tương đối đầy đủ</b> ở nhiều cấp, từ chiến lược, KH trung hạn, KH hàng năm, quản trị dự án đến quản trị danh mục đầu tư.</div></div></div>
+      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:3"><span class="vtl__dot">2</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2M15 7h2a5 5 0 0 1 4 8"/><path d="m2 2 20 20"/></svg><div class="vtl__tx" style="font-size:1.15rem; line-height:1.5;">Các tầng chỉ tiêu <b>chưa liên kết thành chuỗi khép kín</b>. Các khoảng trống:<ul style="margin-top:0.4rem; margin-left:1.5rem; display:flex; flex-direction:column; gap:0.2rem;"><li>Thiếu mốc quản trị (baseline) theo phê duyệt sử dụng vốn để theo dõi xuyên suốt.</li><li>Thiếu cơ chế lượng hóa kết quả thực hiện KPI hàng năm đến hiệu quả đầu tư/tài chính và khả năng trả nợ (Giải quyết = KPI theo CV 165).</li><li>Thiếu cơ chế cảnh báo sớm, quản lý thay đổi (đã bổ sung quy định theo Quy chế QLDA 860).</li></ul></div></div></div>
+      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:4"><span class="vtl__dot">3</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17h6v-6"/><path d="m22 17-8.5-8.5-5 5L2 7"/></svg><div class="vtl__tx" style="font-size:1.15rem; line-height:1.5;">Một dự án có thể <b>đạt KPI năm nhưng hiệu quả cả vòng đời vẫn suy giảm</b> nếu trữ lượng, sản lượng, chi phí, tiến độ hoặc phương án vốn thay đổi.</div></div></div>
+      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:5"><span class="vtl__dot">4</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><div class="vtl__tx" style="font-size:1.15rem; line-height:1.5;"><b>CV 165 nên được định vị là lớp đo tác động tài chính, đầu tư</b> của việc thực hiện KPI, không phải bộ KPI điều hành thứ hai.</div></div></div>
+      <div class="vtl__row ac-reveal ac-reveal--up" style="--i:6"><span class="vtl__dot">5</span><div class="vtl__card"><svg class="vtl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg><div class="vtl__tx" style="font-size:1.15rem; line-height:1.5;"><b>Kiến nghị:</b> dịch chuyển từ mô hình giao chỉ tiêu hàng năm và chấm điểm sang quản trị theo baseline, dự báo, cảnh báo và lượng hóa tác động.</div></div></div>
     </div>
   </div></div>
 </section>
@@ -958,15 +965,15 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   <div class="slide-content"><div class="wrap wrap--wide">
     <div class="head-center" style="margin-bottom:.35rem">
       <div class="eyebrow ac-reveal" style="--i:0">Mỗi tầng trả lời một câu hỏi quản trị khác nhau</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Sáu tầng quản trị và vai trò</h2>
+      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Hệ thống KPI hiện hữu</h2>
     </div>
     <div class="gstack">
-      <div class="glayer ac-reveal ac-reveal--up" style="--i:2"><span class="glayer__n">1</span><div class="glayer__main"><div class="glayer__t">Chiến lược &amp; Kế hoạch 5 năm</div><div class="glayer__r">Xác định mục tiêu dài hạn và định hướng phân bổ nguồn lực.</div></div><div class="glayer__gap">Việc thực hiện hàng năm chưa thể hiện đầy đủ tác động đến mục tiêu tổng thể.</div></div>
-      <div class="glayer ac-reveal ac-reveal--up" style="--i:3"><span class="glayer__n">2</span><div class="glayer__main"><div class="glayer__t">Kế hoạch SXKD hàng năm</div><div class="glayer__r">Chuyển hóa mục tiêu trung hạn thành chỉ tiêu điều hành năm.</div></div><div class="glayer__gap">Chưa phản ánh mức độ ảnh hưởng đến hiệu quả sử dụng vốn của PVEP.</div></div>
-      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:4"><span class="glayer__n">3</span><div class="glayer__main"><div class="glayer__t">Cấp dự án dầu khí</div><div class="glayer__r">Xác lập mốc chuẩn vòng đời: phạm vi, tiến độ, chi phí, sản lượng, trữ lượng.</div></div><div class="glayer__gap">Giả định nền trong BCSDV chưa được theo dõi liên tục như baseline.</div></div>
-      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:5"><span class="glayer__n">4</span><div class="glayer__main"><div class="glayer__t">KPI do TGĐ giao</div><div class="glayer__r">Công cụ điều hành trực tiếp hàng năm, trong tầm kiểm soát và tầm ảnh hưởng.</div></div><div class="glayer__gap">Chưa liên kết với baseline vòng đời của dự án.</div></div>
-      <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:6"><span class="glayer__n">5</span><div class="glayer__main"><div class="glayer__t">Chỉ tiêu CV 165</div><div class="glayer__r">Đo tác động tài chính, hiệu quả vốn, dòng tiền và khả năng trả nợ.</div></div><div class="glayer__gap">Cần định vị là lớp đánh giá tác động, không phải bộ KPI thứ hai.</div></div>
-      <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:7"><span class="glayer__n">6</span><div class="glayer__main"><div class="glayer__t">Quản trị danh mục đầu tư</div><div class="glayer__r">Ra quyết định cấp danh mục trên cơ sở hiệu quả, rủi ro và nguồn lực.</div></div><div class="glayer__gap">Chưa tích hợp đầy đủ KPI, CV 165 và chỉ số cảnh báo rủi ro.</div></div>
+      <div class="glayer ac-reveal ac-reveal--up" style="--i:2"><span class="glayer__n">1</span><div class="glayer__main"><div class="glayer__t">Chiến lược &amp; Kế hoạch 5 năm</div><div class="glayer__r">Xác định mục tiêu dài hạn và định hướng phân bổ nguồn lực.</div></div><div class="glayer__gap glayer__gap--merge">Việc thực hiện hàng năm chưa thể hiện đầy đủ tác động đến mục tiêu tổng thể.</div></div>
+      <div class="glayer ac-reveal ac-reveal--up" style="--i:3"><span class="glayer__n">2</span><div class="glayer__main"><div class="glayer__t">Kế hoạch SXKD hàng năm</div><div class="glayer__r">Chuyển hóa mục tiêu trung hạn thành chỉ tiêu điều hành năm.</div></div></div>
+      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:4"><span class="glayer__n">3</span><div class="glayer__main"><div class="glayer__t">Cấp dự án dầu khí</div><div class="glayer__r">Xác lập baseline chuẩn theo vòng đời DA: phạm vi, tiến độ, chi phí, sản lượng, trữ lượng, hiệu quả đầu tư.</div></div><div class="glayer__gap">Các giả định xuyên suốt trong BCSDV chưa được theo dõi liên tục.</div></div>
+      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:5"><span class="glayer__n">4</span><div class="glayer__main"><div class="glayer__t">KPI do TGĐ giao</div><div class="glayer__r">Công cụ điều hành trực tiếp hàng năm, trong tầm kiểm soát và tầm ảnh hưởng.</div></div><div class="glayer__gap"><div>Chưa liên kết với baseline vòng đời của dự án.<div style="margin-top:0.35rem; display:flex; gap:0.35rem;"><span style="color:var(--caution)">•</span><span>Chưa thể hiện kết quả thực hiện như thế nào đến hiệu quả, mục tiêu dài hạn của dự án.</span></div></div></div></div>
+      <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:6"><span class="glayer__n">5</span><div class="glayer__main"><div class="glayer__t">Chỉ tiêu CV 165</div><div class="glayer__r">Đo tác động tài chính, hiệu quả vốn, dòng tiền và khả năng trả nợ.</div></div><div class="glayer__gap">Cần định vị là lớp đánh giá tác động, đo lường hiệu quả sử dụng vốn của kết quả thực hiện KPI.</div></div>
+      <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:7"><span class="glayer__n">6</span><div class="glayer__main"><div class="glayer__t">Quản trị dự án và danh mục đầu tư</div><div class="glayer__r">Ra quyết định cấp danh mục trên cơ sở hiệu quả, rủi ro và nguồn lực.</div></div><div class="glayer__gap">Chưa tích hợp đầy đủ KPI, KQ của các KPI theo CV 165 và chỉ số cảnh báo rủi ro.</div></div>
     </div>
   </div></div>
 </section>
@@ -983,10 +990,10 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
         <div class="kmap__ch"><span class="kmap__ix">A.</span><span class="kmap__tt">Hệ thống KPI hiện có</span><span class="kmap__io io-in">Đầu vào</span></div>
         <div class="kmcol">
           <div class="kcard"><div class="kcard__top"><span class="kcard__num">1</span><span class="kcard__name">Chiến lược &amp; Kế hoạch 5 năm</span><span class="kcard__by">Petrovietnam</span></div><div class="kchips"><span class="kchip">Sản lượng</span><span class="kchip">GTTL</span><span class="kchip">Tài chính</span><span class="kchip">Đầu tư · Vốn</span></div></div>
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">2</span><span class="kcard__name">Kế hoạch hàng năm PVEP</span><span class="kcard__by">HĐTV</span></div><div class="kchips"><span class="kchip">SLKT</span><span class="kchip">Tài chính HN</span><span class="kchip">Vốn ĐT</span><span class="kchip">Phân kỳ quý</span></div></div>
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">3</span><span class="kcard__name">Cấp Dự án — Baseline vòng đời</span><span class="kcard__by">BCT · PVN</span></div><div class="ksub"><div><h6>KHCV dài hạn</h6><p>CTTKTD · ODP · FDP · AP</p></div><div><h6>Phê duyệt SDV</h6><p>CAPEX·OPEX·ABEX · giả định hiệu quả</p></div></div></div>
-          <div class="kcard kcard--in"><div class="kcard__top"><span class="kcard__num">4</span><span class="kcard__name">KPI điều hành hàng năm</span><span class="kcard__by">TGĐ giao</span></div><div class="kchips"><span class="kchip">GTTL</span><span class="kchip">SLKT</span><span class="kchip">CAPEX·OPEX</span><span class="kchip">UPC</span><span class="kchip">Dòng tiền</span><span class="kchip">Uptime</span><span class="kchip">TRIF</span></div></div>
-          <div class="kcard"><div class="kcard__top"><span class="kcard__num">5</span><span class="kcard__name">Tiêu chí &amp; quản trị danh mục đầu tư</span><span class="kcard__by">HĐTV</span></div><div class="kchips"><span class="kchip">Xếp hạng DA</span><span class="kchip">Ưu tiên vốn</span><span class="kchip">Tái cấu trúc</span><span class="kchip">Thoái vốn</span></div></div>
+          <div class="kcard"><div class="kcard__top"><span class="kcard__num">2</span><span class="kcard__name">Kế hoạch hàng năm PVEP</span><span class="kcard__by">Petrovietnam<br>HĐTV PVEP</span></div><div class="kchips"><span class="kchip">SLKT</span><span class="kchip">Tài chính HN</span><span class="kchip">Vốn ĐT</span><span class="kchip">Phân kỳ quý</span></div></div>
+          <div class="kcard"><div class="kcard__top"><span class="kcard__num">3</span><span class="kcard__name">Cấp Dự án — Baseline vòng đời</span></div><div class="ksub"><div><h6>KHCV dài hạn</h6><p>CTTKTD · ODP · FDP · AP</p><span class="kby">BCT · Petrovietnam</span></div><div><h6>Phê duyệt SDV</h6><p>CAPEX·OPEX·ABEX · giả định hiệu quả</p><span class="kby">HĐTV PVEP</span></div></div></div>
+          <div class="kcard kcard--in"><div class="kcard__top"><span class="kcard__num">4</span><span class="kcard__name">KPI điều hành hàng năm</span><span class="kcard__by">TGĐ PVEP</span></div><div class="kchips"><span class="kchip">GTTL</span><span class="kchip">SLKT</span><span class="kchip">CAPEX·OPEX</span><span class="kchip">UPC</span><span class="kchip">Dòng tiền</span><span class="kchip">Uptime</span><span class="kchip">TRIF</span></div></div>
+          <div class="kcard"><div class="kcard__top"><span class="kcard__num">5</span><span class="kcard__name">Tiêu chí &amp; quản trị danh mục đầu tư</span><span class="kcard__by">HĐTV PVEP</span></div><div class="kchips"><span class="kchip">Xếp hạng DA</span><span class="kchip">Ưu tiên vốn</span><span class="kchip">Tái cấu trúc</span><span class="kchip">Thoái vốn</span></div></div>
         </div>
       </div>
       <div class="ac-reveal" style="--i:3">
@@ -994,7 +1001,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
         <div class="kflow">
           <div class="kstep"><span class="kl">Mốc chuẩn</span>Baseline BCSDV / Phê duyệt SDV</div>
           <div class="karrow">▼</div>
-          <div class="kstep kstep--in"><span class="kl">Thực hiện</span>KPI năm (TGĐ giao) + forecast</div>
+          <div class="kstep kstep--in"><span class="kl">Thực hiện</span>KPI năm (TGĐ giao)</div>
           <div class="karrow">▼</div>
           <div class="kstep">So sánh chênh lệch lũy kế</div>
           <div class="karrow">▼</div>
@@ -1002,7 +1009,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
           <div class="karrow">▼</div>
           <div class="ksem ac-pulse"><span class="g">XANH<br>Trong tầm</span><span class="y">VÀNG<br>Giải trình</span><span class="r">ĐỎ<br>Ngoại lệ</span></div>
           <div class="karrow">▼</div>
-          <div class="kstep kstep--impact" style="border-color:var(--pvep-green);background:rgba(0,176,80,.06)"><span class="kl" style="color:var(--pvep-green)">Quyết định</span>Quản trị danh mục đầu tư</div>
+          <div class="kstep kstep--impact" style="border-color:var(--pvep-green);background:rgba(0,176,80,.06)"><span class="kl" style="color:var(--pvep-green)">Quyết định</span>Quản trị dự án và danh mục đầu tư</div>
         </div>
       </div>
       <div class="ac-reveal ac-reveal--right" style="--i:4">
@@ -1010,12 +1017,11 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
         <div class="kmcol">
           <div class="kcard"><div class="kgt"><span class="kd"></span>Hiệu quả tài chính</div><div class="kchips"><span class="kchip">NPV</span><span class="kchip">IRR</span><span class="kchip">PI</span><span class="kchip">Payback</span></div></div>
           <div class="kcard"><div class="kgt"><span class="kd"></span>Khả năng tạo dòng tiền</div><div class="kchips"><span class="kchip">NCF</span><span class="kchip">OCF</span><span class="kchip">FCF</span><span class="kchip">DT lũy kế</span></div></div>
-          <div class="kcard"><div class="kgt"><span class="kd"></span>Khả năng tự trả nợ</div><div class="kchips"><span class="kchip">CFADS</span><span class="kchip">Debt Service</span><span class="kchip">DSCR</span><span class="kchip">DT sau nợ</span></div></div>
+          <div class="kcard"><div class="kgt"><span class="kd"></span>Khả năng tự trả nợ<span class="kbadge">cần bổ sung (chưa có)</span></div><div class="kchips"><span class="kchip">CFADS</span><span class="kchip">Debt Service</span><span class="kchip">DSCR</span><span class="kchip">DT sau nợ</span></div></div>
           <div class="kcard kcard--in"><div class="kgt"><span class="kd"></span>KPI nguyên nhân (tác động TC)</div><div class="kchips"><span class="kchip">CAPEX·OPEX</span><span class="kchip">Cost Overrun</span><span class="kchip">Prod. Attainment</span><span class="kchip">Decline Rate</span><span class="kchip">Lifting Cost</span></div></div>
         </div>
       </div>
     </div>
-    <p class="lead-note ac-reveal" style="--i:5; margin-top:.6rem; max-width:none">Đầu vào là hệ thống KPI hiện có, gồm cả tiêu chí và quản trị danh mục đầu tư; ở giữa là cơ chế liên kết lấy baseline BCSDV và phê duyệt SDV làm mốc chuẩn, so sánh chênh lệch, đặt ngưỡng Xanh/Vàng/Đỏ và đưa lên quyết định danh mục; đầu ra là nhóm chỉ tiêu CV 165.</p>
   </div></div>
 </section>
 
@@ -1023,56 +1029,22 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 <section class="slide" data-chapter="0">
   <div class="slide-content"><div class="wrap wrap--wide">
     <div class="head-center" style="margin-bottom:.35rem">
-      <div class="eyebrow ac-reveal" style="--i:0">Bảy điểm gãy trong chuỗi liên kết</div>
+      <!-- Eyebrow removed -->
       <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Khoảng trống quản trị</h2>
     </div>
     <div class="gapgrid">
       <div class="gapcard ac-reveal ac-reveal--up" style="--i:2"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><circle cx="12" cy="7" r="2"/><circle cx="12" cy="17" r="2"/></svg></div><h4>Thiếu liên kết dọc</h4><p>KPI năm chưa phản ánh đầy đủ đóng góp vào chiến lược và hiệu quả vòng đời dự án.</p></div>
       <div class="gapcard ac-reveal ac-reveal--up" style="--i:3"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 0 1 1-1h13l-3 4 3 4H5"/></svg></div><h4>Thiếu mốc chuẩn thống nhất</h4><p>Giả định trong BCSDV chưa được theo dõi như baseline xuyên suốt.</p></div>
-      <div class="gapcard ac-reveal ac-reveal--up" style="--i:4"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M8 14h2M14 10h2M14 14h2M8 18h8"/></svg></div><h4>Thiếu lượng hóa tác động</h4><p>Sai lệch KPI chưa quy đổi thành tác động tới NPV, IRR, FCF, CFADS, DSCR.</p></div>
-      <div class="gapcard ac-reveal ac-reveal--up" style="--i:5"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg></div><h4>Thiếu cảnh báo sớm</h4><p>Chỉ tiêu phản ánh kết quả đã xảy ra, thiếu chỉ số dự báo rủi ro.</p></div>
-      <div class="gapcard ac-reveal ac-reveal--up" style="--i:6"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.5 15.5M14 4h6v6"/></svg></div><h4>Thiếu quản lý thay đổi</h4><p>Việc ghi nhận, phân loại và trình phê duyệt thay đổi còn phân tán.</p></div>
-      <div class="gapcard ac-reveal ac-reveal--up" style="--i:7"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><h4>Thiếu tích hợp danh mục</h4><p>KPI, CV 165, cảnh báo và nhật ký thay đổi chưa tổng hợp cho toàn danh mục.</p></div>
-      <div class="gapcard ac-reveal ac-reveal--up" style="--i:8"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div><h4>Thiếu vòng phản hồi cải tiến</h4><p>Sự cố và bài học kinh nghiệm chưa được hệ thống hóa để dùng chung.</p></div>
+      <div class="gapcard ac-reveal ac-reveal--up" style="--i:4"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M8 14h2M14 10h2M14 14h2M8 18h8"/></svg></div><h4>Thiếu lượng hóa tác động</h4><p>Kết quả thực hiện KPI chưa quy đổi thành tác động tới NPV, IRR, FCF, CFADS, DSCR.</p></div>
+      <div class="gapcard ac-reveal ac-reveal--up" style="--i:5"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg></div><h4>Thiếu cảnh báo sớm</h4><p>Chỉ tiêu KPI hiện hành phản ánh kết quả đã xảy ra, thiếu chỉ số dự báo rủi ro.</p></div>
+      <div class="gapcard ac-reveal ac-reveal--up" style="--i:6"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.5 15.5M14 4h6v6"/></svg></div><h4>Thiếu quản lý thay đổi</h4><p>Chưa có hệ thống ghi nhận, phân loại và các thay đổi.</p></div>
+      <div class="gapcard ac-reveal ac-reveal--up" style="--i:7"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><h4>Thiếu tích hợp danh mục</h4><p>KPI, CV 165, cảnh báo và nhật ký thay đổi chưa tổng hợp cho toàn bộ danh mục.</p></div>
+      <div class="gapcard ac-reveal ac-reveal--up" style="--i:8"><div class="gapcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div><h4>Thiếu vòng phản hồi cải tiến</h4><p>Sự cố và bài học kinh nghiệm chưa được hệ thống hóa để dùng chung trong toàn PVEP.</p></div>
     </div>
   </div></div>
 </section>
 
-<!-- ========================= SLIDE 6 — Nhân–quả KPI năm → CV 165 (tương tác) ========================= -->
-<section class="slide" data-chapter="1">
-  <div class="slide-content"><div class="wrap">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Vì sao đạt KPI năm nhưng hiệu quả chưa cao · bấm để truy vết</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Liên kết nhân–quả: KPI năm trọng yếu → <span class="neo">chỉ tiêu CV 165 bị ảnh hưởng</span></h2>
-    </div>
-    <div class="iz-trace ac-reveal" style="--i:2" id="trace">
-      <div class="iz-causes">
-        <button class="iz-cause on" data-tg="NPV,FCF,DSCR">CAPEX vượt kế hoạch</button>
-        <button class="iz-cause" data-tg="OCF,NCF,CFADS,Break-even">OPEX / UPC tăng</button>
-        <button class="iz-cause" data-tg="Doanh thu,NCF,CFADS,DSCR">Sản lượng không đạt</button>
-        <button class="iz-cause" data-tg="NPV,IRR,Payback,Dòng tiền lũy kế">Chậm First Oil / First Gas</button>
-        <button class="iz-cause" data-tg="FCF,Funding gap,Nhu cầu hỗ trợ vốn">Dòng tiền PVEP âm hơn KH</button>
-      </div>
-      <div class="iz-trace__mid">→</div>
-      <div class="iz-tgts" id="traceTgts">
-        <span class="iz-tgt" data-k="NPV">NPV</span>
-        <span class="iz-tgt" data-k="IRR">IRR</span>
-        <span class="iz-tgt" data-k="Payback">Payback</span>
-        <span class="iz-tgt" data-k="FCF">FCF</span>
-        <span class="iz-tgt" data-k="OCF">OCF</span>
-        <span class="iz-tgt" data-k="NCF">NCF</span>
-        <span class="iz-tgt" data-k="CFADS">CFADS</span>
-        <span class="iz-tgt" data-k="DSCR">DSCR</span>
-        <span class="iz-tgt" data-k="Break-even">Break-even</span>
-        <span class="iz-tgt" data-k="Doanh thu">Doanh thu</span>
-        <span class="iz-tgt" data-k="Dòng tiền lũy kế">Dòng tiền lũy kế</span>
-        <span class="iz-tgt" data-k="Funding gap">Funding gap</span>
-        <span class="iz-tgt" data-k="Nhu cầu hỗ trợ vốn">Nhu cầu hỗ trợ vốn</span>
-      </div>
-    </div>
-    <p class="iz-hint ac-reveal" style="--i:3">Bấm một <b>nguyên nhân (KPI năm)</b> bên trái → các <b>KPI CV 165</b> bị ảnh hưởng sẽ sáng lên. Tránh đạt KPI năm nhưng không rõ tác động đến mục tiêu theo phê duyệt SDV.</p>
-  </div></div>
-</section>
+<!-- Slide 6 Removed -->
 
 <!-- ========================= SLIDE 7 — CV 165: ý nghĩa và vai trò ========================= -->
 <section class="slide" data-chapter="1">
@@ -1082,7 +1054,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
       <h2 class="s-title s-title--sm ac-reveal" style="--i:1">CV 165: ý nghĩa và vai trò</h2>
     </div>
     <div class="cmp">
-      <div class="tri__card ac-reveal ac-reveal--left" style="--i:2"><span class="tri__k">Cách CV 165 đo lường</span><ul class="rlist"><li>So sánh các chỉ số công việc, chi phí, dòng tiền và hiệu quả đầu tư khi triển khai với thời điểm phê duyệt.</li><li>Cập nhật hiện trạng, phân tích hiệu quả triển khai, định hướng điều chỉnh kịp thời và tối ưu nguồn lực.</li><li>Quan điểm KSNB: duy trì KPI năm do TGĐ giao, không tạo thêm bộ KPI hiệu quả đầu tư độc lập. CV 165 để đánh giá tác động, cảnh báo và hỗ trợ quyết định.</li></ul></div>
+      <div class="tri__card ac-reveal ac-reveal--left" style="--i:2"><span class="tri__k">Cách CV 165 đo lường</span><ul class="rlist"><li>So sánh các chỉ số công việc, chi phí, dòng tiền và hiệu quả đầu tư khi triển khai với thời điểm phê duyệt.</li><li>Cập nhật hiện trạng, phân tích hiệu quả triển khai, định hướng điều chỉnh kịp thời và tối ưu nguồn lực.</li><li>Nên duy trì KPI năm do TGĐ giao, không tạo thêm bộ KPI hiệu quả đầu tư độc lập. CV 165 để đánh giá tác động, cảnh báo và hỗ trợ quyết định.</li></ul></div>
       <div class="tri__card ac-reveal ac-reveal--right" style="--i:3; border-top-color:var(--pvep-blue)"><span class="tri__k">So sánh thực hiện với phê duyệt cho biết dự án…</span>
         <div class="tri3">
           <div class="tri3__c tri3__c--up"><div class="tri3__ar">↑</div><div class="tri3__l">Tốt lên</div></div>
@@ -1103,12 +1075,13 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
       <h2 class="s-title s-title--sm ac-reveal" style="--i:1">CV 165: nội dung cần hoàn thiện</h2>
     </div>
     <div class="g5">
-      <div class="g5card ac-reveal ac-reveal--up" style="--i:2"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 12 4-4 4 4 5-5"/></svg></div><h4>Hiệu quả đầu tư</h4><div class="kchips"><span class="kchip">NPV</span><span class="kchip">IRR</span><span class="kchip">PI</span><span class="kchip">EMV</span></div><div class="g5card__note">Làm rõ cơ sở tính, ngưỡng đánh giá và công thức PI; EMV cho dự án thăm dò, thẩm lượng.</div></div>
-      <div class="g5card ac-reveal ac-reveal--up" style="--i:3"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a2.5 2 0 0 0-2.5-1.5c-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2a2.5 2 0 0 1-2.5-1.5M12 6v1.5M12 16.5V18"/></svg></div><h4>Hiệu quả chi phí</h4><div class="kchips"><span class="kchip">F&amp;D Cost</span><span class="kchip">Capital Eff.</span><span class="kchip">Cost Overrun</span></div><div class="g5card__note">Vượt CAPEX phê duyệt là <b>Đỏ</b>; Vàng ở ngưỡng tiệm cận 90–95%.</div></div>
-      <div class="g5card ac-reveal ac-reveal--up" style="--i:4"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></div><h4>Dòng tiền dự án</h4><div class="kchips"><span class="kchip">NCF</span><span class="kchip">OCF</span><span class="kchip">Payback</span><span class="kchip">FCF</span><span class="kchip">CFADS</span></div><div class="g5card__note">Đánh giá khả năng tạo tiền và nhu cầu vốn của dự án.</div></div>
-      <div class="g5card ac-reveal ac-reveal--up" style="--i:5"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Khả năng tự trả nợ</h4><div class="kchips"><span class="kchip">DSCR</span><span class="kchip">ICR</span><span class="kchip">DT sau nợ</span></div><div class="g5card__note">Bổ sung theo yêu cầu HĐTV; rủi ro trọng yếu với dự án có vốn vay.</div></div>
-      <div class="g5card ac-reveal ac-reveal--up" style="--i:6"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h4>Hiệu quả khai thác</h4><div class="kchips"><span class="kchip">Lifting Cost</span><span class="kchip">Break-even</span><span class="kchip">Đáp ứng SL</span><span class="kchip">Suy giảm</span></div><div class="g5card__note">RRR áp dụng ở cấp danh mục, không áp cho từng dự án.</div></div>
+      <div class="g5card ac-reveal ac-reveal--up" style="--i:2"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 12 4-4 4 4 5-5"/></svg></div><h4 style="font-size:1.15rem">Hiệu quả đầu tư</h4><div class="kchips"><span class="kchip">NPV</span><span class="kchip">IRR</span><span class="kchip">PI</span><span class="kchip">EMV</span></div><div class="g5card__note" style="font-size:1.05rem; line-height:1.4;">Bổ sung cơ sở tính, ngưỡng đánh giá và công thức profitability index; EMV cho dự án thăm dò, thẩm lượng.</div></div>
+      <div class="g5card ac-reveal ac-reveal--up" style="--i:3"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a2.5 2 0 0 0-2.5-1.5c-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2a2.5 2 0 0 1-2.5-1.5M12 6v1.5M12 16.5V18"/></svg></div><h4 style="font-size:1.15rem">Thay đổi ngưỡng cảnh báo</h4><div class="kchips"><span class="kchip">F&amp;D Cost</span><span class="kchip">Capital Eff.</span><span class="kchip">Cost Overrun</span></div><div class="g5card__note" style="font-size:1.05rem; line-height:1.4;">Vượt CAPEX phê duyệt là <b style="color:#dc2626">Đỏ</b>; <b style="color:#d97706">Vàng</b> ở ngưỡng tiệm cận 90–95%.</div></div>
+      <div class="g5card ac-reveal ac-reveal--up" style="--i:4"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></div><h4 style="font-size:1.15rem">Dòng tiền dự án</h4><div class="kchips"><span class="kchip">NCF</span><span class="kchip">OCF</span><span class="kchip">Payback</span><span class="kchip">FCF</span><span class="kchip">CFADS</span></div><div class="g5card__note" style="font-size:1.05rem; line-height:1.4;">Đánh giá khả năng tạo tiền và nhu cầu vốn của dự án.</div></div>
+      <div class="g5card ac-reveal ac-reveal--up" style="--i:5"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4 style="font-size:1.15rem">Khả năng tự trả nợ</h4><div class="kchips"><span class="kchip">DSCR</span><span class="kchip">ICR</span><span class="kchip">DT sau nợ</span></div><div class="g5card__note" style="font-size:1.05rem; line-height:1.4;">Bổ sung theo yêu cầu HĐTV; rủi ro trọng yếu với dự án có vốn vay.</div></div>
+      <div class="g5card ac-reveal ac-reveal--up" style="--i:6"><div class="g5card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h4 style="font-size:1.15rem">Hiệu quả khai thác</h4><div class="kchips"><span class="kchip">Lifting Cost</span><span class="kchip">Break-even</span><span class="kchip">Đáp ứng SL</span><span class="kchip">Suy giảm</span></div><div class="g5card__note" style="font-size:1.05rem; line-height:1.4;">RRR áp dụng ở cấp danh mục, không áp cho từng dự án.</div></div>
     </div>
+    <p class="lead-note ac-reveal" style="--i:7; margin-top:1.5rem; font-size:1.1rem; max-width:none"><b>Quan hệ giữa Điều 6 và Điều 7:</b> Chỉ tiêu trọng yếu theo Điều 6 cần có ngưỡng giám sát tại Điều 7.</p>
   </div></div>
 </section>
 
@@ -1132,10 +1105,9 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
       <div class="bull__legend">
         <div class="zone ac-reveal ac-reveal--right" style="--i:3"><div class="zone__t"><span class="zdot"></span>Trong tầm kiểm soát</div><div class="zone__d">Tiến độ, chi phí, cảnh báo sớm, cung cấp dữ liệu, giải trình, đề xuất khắc phục. <b>Giao trực tiếp, gắn trách nhiệm cá nhân/đơn vị.</b></div></div>
         <div class="zone zone--inf ac-reveal ac-reveal--right" style="--i:4"><div class="zone__t"><span class="zdot"></span>Trong tầm ảnh hưởng</div><div class="zone__d">Sản lượng, một phần chi phí và tiến độ chịu tác động bên ngoài. Đánh giá kèm phân tích nguyên nhân chủ quan và khách quan.</div></div>
-        <div class="zone zone--out ac-reveal ac-reveal--right" style="--i:5"><div class="zone__t"><span class="zdot"></span>Ngoài tầm kiểm soát</div><div class="zone__d">Giá dầu/khí, tỷ giá, vật tư – dịch vụ, địa chất, chính sách. Theo dõi như chỉ số cảnh báo, <b>không gắn trách nhiệm cá nhân.</b></div></div>
+        <div class="zone zone--out ac-reveal ac-reveal--right" style="--i:5"><div class="zone__t"><span class="zdot"></span>Ngoài tầm kiểm soát</div><div class="zone__d">Giá dầu/khí, tỷ giá, giá vật tư – dịch vụ, địa chất, chính sách. Theo dõi như chỉ số cảnh báo, <b>không gắn trách nhiệm cá nhân.</b></div></div>
       </div>
     </div>
-    <p class="lead-note ac-reveal" style="--i:6; margin-top:.7rem; max-width:none">Vì vậy, không nên gắn NPV, IRR, dòng tiền, DSCR, CFADS với trách nhiệm cá nhân. Các chỉ số này chịu ảnh hưởng lớn bởi địa chất, giá dầu/khí, tỷ giá và chính sách.</p>
   </div></div>
 </section>
 
@@ -1171,10 +1143,10 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
             <circle cx="135" cy="105" r="20" fill="#00B050"/><text x="135" y="111" text-anchor="middle" font-size="15" fill="#fff">6</text>
           </g>
           <g font-family="'Be Vietnam Pro',sans-serif" font-weight="700" font-size="13" fill="#334155">
-            <text x="230" y="20" text-anchor="middle">Baseline</text>
+            <text x="230" y="20" text-anchor="middle">Baseline theo phê duyệt sử dụng vốn</text>
             <text x="358" y="100" text-anchor="start">Dự báo</text>
             <text x="358" y="220" text-anchor="start">Cảnh báo</text>
-            <text x="230" y="306" text-anchor="middle">Lượng hóa</text>
+            <text x="230" y="306" text-anchor="middle">Lượng hóa tác động</text>
             <text x="102" y="220" text-anchor="end">Xử lý thay đổi</text>
             <text x="102" y="100" text-anchor="end">Quyết định</text>
           </g>
@@ -1194,9 +1166,9 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     </div>
     <div class="quad">
       <div class="qcard ac-reveal ac-reveal--up" style="--i:2"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><div><h4>KPI do TGĐ giao</h4><div class="qcard__q">Dự án có thực hiện đúng nhiệm vụ, sản lượng, tiến độ, chi phí, an toàn không?</div><div class="qcard__u"><b>Dùng để:</b> giao nhiệm vụ và đánh giá thực hiện hàng năm.</div></div></div>
-      <div class="qcard ac-reveal ac-reveal--up" style="--i:3"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 12 4-4 4 4 5-5"/></svg></div><div><h4>Chỉ tiêu CV 165</h4><div class="qcard__q">Việc thực hiện làm hiệu quả, dòng tiền, khả năng trả nợ tốt lên hay xấu đi?</div><div class="qcard__u"><b>Dùng để:</b> đánh giá tác động, cảnh báo, cập nhật dự báo, hỗ trợ quyết định.</div></div></div>
-      <div class="qcard qcard--in ac-reveal ac-reveal--up" style="--i:4"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div><div><h4>Chỉ số cảnh báo (KRI)</h4><div class="qcard__q">Rủi ro nào đang hình thành trước khi thành tổn thất?</div><div class="qcard__u"><b>Dùng để:</b> đặt ngưỡng Xanh/Vàng/Đỏ, hành động và trách nhiệm báo cáo.</div></div></div>
-      <div class="qcard ac-reveal ac-reveal--up" style="--i:5"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.5 15.5M14 4h6v6"/></svg></div><div><h4>Quản lý thay đổi</h4><div class="qcard__q">Khi thực tế khác mốc chuẩn, ai ghi nhận, đánh giá và phê duyệt?</div><div class="qcard__u"><b>Dùng để:</b> kiểm soát thay đổi trước khi vượt phạm vi, chi phí hoặc hiệu quả đã phê duyệt.</div></div></div>
+      <div class="qcard ac-reveal ac-reveal--up" style="--i:3"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 12 4-4 4 4 5-5"/></svg></div><div><h4>Chỉ tiêu CV 165</h4><div class="qcard__q">Kết quả thực hiện làm hiệu quả, dòng tiền, khả năng trả nợ tốt lên, xấu đi hay giữ nguyên?</div><div class="qcard__u"><b>Dùng để:</b> đánh giá tác động, cảnh báo, cập nhật dự báo, hỗ trợ quyết định.</div></div></div>
+      <div class="qcard qcard--in ac-reveal ac-reveal--up" style="--i:4"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div><div><h4>Chỉ số cảnh báo (KRI) do TGĐ ban hành theo Quy chế QLDA mới</h4><div class="qcard__q">Rủi ro nào đang hình thành trước khi thành tổn thất?</div><div class="qcard__u"><b>Dùng để:</b> đặt ngưỡng Xanh/Vàng/Đỏ, hành động và trách nhiệm báo cáo.</div></div></div>
+      <div class="qcard ac-reveal ac-reveal--up" style="--i:5"><div class="qcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.5 15.5M14 4h6v6"/></svg></div><div><h4>Quản lý thay đổi</h4><div class="qcard__q">Khi thực tế khác mốc chuẩn, theo phê duyệt ai ghi nhận, đánh giá và phê duyệt các KH tiếp theo?</div><div class="qcard__u"><b>Dùng để:</b> kiểm soát thay đổi trước khi vượt phạm vi, chi phí hoặc hiệu quả đã phê duyệt.</div></div></div>
     </div>
   </div></div>
 </section>
@@ -1224,7 +1196,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   <div class="slide-content"><div class="wrap wrap--wide">
     <div class="head-center" style="margin-bottom:.35rem">
       <div class="eyebrow ac-reveal" style="--i:0">Quản trị danh mục · QĐ 1200 · 1347 · bấm để lọc</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Bộ lọc trọng số &amp; định vị danh mục</h2>
+      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Tiêu chí đánh giá và quản trị danh mục đầu tư</h2>
     </div>
     <div class="head-center" style="margin-bottom:.35rem">
       <div class="iz-seg ac-reveal" id="portSeg" style="--i:2">
@@ -1264,7 +1236,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   <div class="slide-content"><div class="wrap wrap--wide">
     <div class="head-center" style="margin-bottom:.35rem">
       <div class="eyebrow ac-reveal" style="--i:0">Nguyên tắc chấm điểm DADK · kéo để thử</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Máy chấm điểm &amp; xếp loại <span class="neo">Dự án dầu khí</span></h2>
+      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Tiêu chí chấm điểm &amp; xếp loại <span class="neo">Dự án dầu khí</span></h2>
     </div>
     <div class="iz-grid2">
       <div class="iz-panel ac-reveal ac-reveal--left" style="--i:2">
@@ -1303,20 +1275,12 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   </div></div>
 </section>
 
-<!-- ========================= SLIDE 15 — Kiến nghị Hội đồng Thành viên ========================= -->
+<!-- ========================= SLIDE 15 — Trân trọng cảm ơn ========================= -->
 <section class="slide" data-chapter="5">
-  <div class="slide-content"><div class="wrap wrap--wide">
-    <div class="head-center">
-      <div class="eyebrow ac-reveal" style="--i:0">Bốn kiến nghị của Ban Kiểm soát Nội bộ</div>
-      <h2 class="s-title s-title--sm ac-reveal" style="--i:1">Kiến nghị Hội đồng Thành viên</h2>
+  <div class="slide-content"><div class="wrap">
+    <div class="head-center" style="margin-top:20vh">
+      <h2 class="s-title ac-reveal" style="--i:1; font-size:4rem; color:var(--pvep-blue);">Trân trọng cảm ơn</h2>
     </div>
-    <div class="recq">
-      <div class="rqcard ac-reveal ac-reveal--up" style="--i:2"><div class="rqcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div><div class="rqcard__t"><b>Phê duyệt định hướng chuyển sang khung quản trị tích hợp</b> theo baseline, dự báo, cảnh báo và lượng hóa tác động.</div></div>
-      <div class="rqcard ac-reveal ac-reveal--up" style="--i:3"><div class="rqcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="rqcard__t"><b>Thông qua định vị CV 165 là lớp đo tác động tài chính,</b> gắn ngưỡng cảnh báo Xanh/Vàng/Đỏ cho từng KPI trọng yếu.</div></div>
-      <div class="rqcard ac-reveal ac-reveal--up" style="--i:4"><div class="rqcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1"/></svg></div><div class="rqcard__t"><b>Giữ nguyên tắc không gắn chỉ tiêu hiệu quả vốn với trách nhiệm cá nhân;</b> tập trung trách nhiệm vào nhiệm vụ trong tầm kiểm soát.</div></div>
-      <div class="rqcard ac-reveal ac-reveal--up" style="--i:5"><div class="rqcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 14l2 2 4-4"/></svg></div><div class="rqcard__t"><b>Giao đầu mối tổng hợp, cập nhật và báo cáo</b> định kỳ quý, sáu tháng, năm và báo cáo ngay khi vượt ngưỡng Vàng/Đỏ.</div></div>
-    </div>
-
   </div></div>
 </section>
 
