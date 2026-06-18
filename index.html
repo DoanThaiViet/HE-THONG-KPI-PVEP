@@ -1399,6 +1399,26 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   .mhint{ display:flex; }
 }
 
+/* ============================================================
+   MÀN HÌNH THẤP / ĐIỆN THOẠI XOAY NGANG (cao ≤ 500px)
+   Màn quá thấp không thể "full từng slide" → chuyển sang CUỘN DỌC
+   tự nhiên (giống điện thoại dọc) để KÉO ĐƯỢC, không bị khóa do
+   scroll-snap mandatory. Áp dụng cả khi bề rộng > 768px (landscape phone).
+   ============================================================ */
+@media (max-height:500px){
+  html{ scroll-snap-type:y proximity; }            /* snap mềm, không khóa cuộn */
+  .slide{ height:auto; min-height:100vh; min-height:100svh; overflow:visible; }
+  .slide-content{
+    overflow:visible; max-height:none;
+    min-height:100vh; min-height:100svh;
+    justify-content:center;
+    padding-top:clamp(2.6rem,12vh,3.4rem);
+    padding-bottom:clamp(1.6rem,9vh,2.6rem);
+  }
+  .slide-content > .wrap{ margin-block:auto; }
+  .mhint{ display:flex; }
+}
+
 /* swipe hint pill — chỉ hiện trên điện thoại, tự ẩn sau lần vuốt đầu */
 .mhint{
   display:none;
@@ -1620,8 +1640,14 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     var allNums = document.querySelectorAll("[data-count-to]"); for (var n=0;n<allNums.length;n++) resetCount(allNums[n]);
     if (!("IntersectionObserver" in window)){ for (var k=0;k<slides.length;k++) activate(slides[k]); return; }
     var io = new IntersectionObserver(function (entries){
-      entries.forEach(function (e){ if (e.isIntersecting && e.intersectionRatio >= VISIBLE_RATIO) activate(e.target); else deactivate(e.target); });
-    }, { threshold: [0, VISIBLE_RATIO, 1] });
+      entries.forEach(function (e){
+        // Slide cao hơn màn hình (điện thoại / cửa sổ thấp) không bao giờ đạt 55%
+        // → kích hoạt thêm khi slide LẤP ĐẦY ≥60% chiều cao khung nhìn.
+        var fills = e.intersectionRect.height >= (window.innerHeight || 0) * 0.6;
+        if (e.isIntersecting && (e.intersectionRatio >= VISIBLE_RATIO || fills)) activate(e.target);
+        else if (!e.isIntersecting) deactivate(e.target);   // chỉ tắt khi ra hẳn khỏi tầm nhìn
+      });
+    }, { threshold: [0, 0.25, VISIBLE_RATIO, 1] });
     for (var s=0;s<slides.length;s++) io.observe(slides[s]);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
@@ -1655,11 +1681,12 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
   // Track the slide currently in view (covers manual scroll / swipe)
   var io2 = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if (e.isIntersecting && e.intersectionRatio >= 0.55){
+      var fills = e.intersectionRect.height >= (window.innerHeight || 0) * 0.6;
+      if (e.isIntersecting && (e.intersectionRatio >= 0.55 || fills)){
         var idx = slides.indexOf(e.target); if (idx >= 0) setCurrent(idx);
       }
     });
-  }, { threshold: [0.55] });
+  }, { threshold: [0, 0.25, 0.55] });
   slides.forEach(function(s){ io2.observe(s); });
 
   document.addEventListener("keydown", function(e){
@@ -1877,7 +1904,9 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
    ===================================================================== */
 (function(){
   "use strict";
-  var MOBILE = function(){ return window.matchMedia("(max-width:768px)").matches; };
+  /* Chế độ "cuộn dọc tự nhiên": điện thoại dọc (≤768px) HOẶC màn rất thấp /
+     điện thoại xoay ngang (≤500px cao). Khi đó KHÔNG co slide bằng zoom. */
+  var MOBILE = function(){ return window.matchMedia("(max-width:768px),(max-height:500px)").matches; };
   var MIN_ZOOM = 0.55;   // không co nhỏ hơn mức này (giữ chữ còn đọc được)
   var SAFETY   = 0.992;  // chừa 0.8% để tránh sát mép gây cuộn
 
