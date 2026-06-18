@@ -822,7 +822,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 .glayer__gap{ display:flex;align-items:flex-start;gap:.45rem;color:var(--ink-600);font-size:clamp(.82rem,1.3vw,1.04rem);line-height:1.26; }
 .glayer__gap::before{ content:"";width:8px;height:8px;border-radius:50%;background:var(--caution);flex:none;margin-top:.4em; }
 /* merged gap note: 1 ghi chú dùng chung cho tầng 1 & 2, kéo xuống ranh giới giữa 2 hàng */
-.glayer__gap--merge{ position:relative; padding-left:1.2rem; transform:translateY(calc(50% + 0.18rem)); z-index:2; }
+.glayer__gap--merge{ position:relative; padding-left:1.2rem; align-self:end; transform:translateY(calc(50% + 0.78rem)); z-index:2; }
 .glayer__gap--merge::before{ content:""; position:absolute; left:-0.5rem; right:-1rem; top:-1.5rem; bottom:-1.5rem; background:#fff; z-index:-1; }
 .glayer__gap--merge::after{ content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); height:calc(100% + 1rem); width:8px; border:2px solid var(--caution); border-right:0; border-radius:8px 0 0 8px; opacity:.5; }
 .glayer--g{ border-left-color:var(--pvep-green); } .glayer--g .glayer__n{ background:var(--pvep-green); }
