@@ -50,8 +50,20 @@ html{ scroll-snap-type:y mandatory; scroll-behavior:smooth; }
 }
 .slide-content{
   flex:1; display:flex; flex-direction:column; justify-content:center;
-  max-height:100%; overflow:hidden; padding:var(--slide-padding);
+  max-height:100%;
+  /* Mặc định full-màn-hình từng slide; nếu nội dung cao hơn khung hình
+     (tivi/máy chiếu tỷ lệ lạ, cửa sổ thấp) thì cho phép cuộn NỘI BỘ slide
+     thay vì cắt cụt chữ. */
+  overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain;
+  padding:var(--slide-padding);
 }
+/* Căn giữa nội dung bằng margin auto: khi vừa khung thì căn giữa, khi tràn
+   thì tự về mép trên và cuộn được (tránh lỗi flex-center cắt mất phần trên). */
+.slide-content > .wrap{ margin-block:auto; }
+/* Thanh cuộn nội bộ slide mảnh, kín đáo (chỉ hiện khi thật sự cần) */
+.slide-content::-webkit-scrollbar{ width:8px; }
+.slide-content::-webkit-scrollbar-thumb{ background:rgba(10,42,74,.18); border-radius:8px; }
+.slide-content{ scrollbar-width:thin; scrollbar-color:rgba(10,42,74,.18) transparent; }
 :root{
   --title-size:clamp(1.8rem, 6vh, 4rem);
   --h2-size:clamp(1.5rem, 4.5vh, 3rem);
@@ -231,6 +243,9 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
    SLIDE 3 — Why RACI matters  (legal chips + 3 blocks)
    ============================================================ */
 .legal-chips{ display:flex; gap:.8rem; justify-content:center; margin:clamp(.7rem,2.4vh,1.5rem) 0; flex-wrap:wrap; }
+/* hàng chip văn bản pháp lý ở slide bìa — xuống dòng & căn giữa, không tràn mép phải */
+.badge-row{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:.55rem; max-width:min(92%,920px); margin-inline:auto; }
+.badge-row .chip{ white-space:normal; text-align:center; max-width:100%; }
 .chip{ font-family:var(--font-display); font-weight:700; font-size:clamp(.8rem,1.6vw,1.05rem); color:#fff; background:linear-gradient(135deg,var(--pvep-blue),var(--info)); padding:.5rem 1.1rem; border-radius:999px; box-shadow:0 8px 22px rgba(0,131,199,.28); }
 .tri{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.8rem,2vw,1.4rem); }
 .tri__card{ background:#fff; border:1px solid var(--ac-line); border-top:4px solid var(--pvep-blue); border-radius:16px; padding:clamp(1rem,2.4vw,1.6rem); box-shadow:0 12px 36px rgba(10,42,74,.06); }
@@ -825,6 +840,11 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
 .glayer__gap--merge{ position:relative; padding-left:1.2rem; align-self:end; transform:translateY(calc(50% + 0.78rem)); z-index:2; }
 .glayer__gap--merge::before{ content:""; position:absolute; left:-0.5rem; right:-1rem; top:-1.5rem; bottom:-1.5rem; background:#fff; z-index:-1; }
 .glayer__gap--merge::after{ content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); height:calc(100% + 1rem); width:8px; border:2px solid var(--caution); border-right:0; border-radius:8px 0 0 8px; opacity:.5; }
+/* multi-bullet gap note: nhiều ghi chú XẾP DỌC, các chấm thẳng cột & cân bằng nhau */
+.glayer__gap--multi{ flex-direction:column; gap:.3rem; }
+.glayer__gap--multi::before{ display:none; }            /* bỏ chấm tự động của container */
+.glayer__gap--multi .gbul{ display:flex; align-items:flex-start; gap:.45rem; }
+.glayer__gap--multi .gbul::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--caution); flex:none; margin-top:.4em; }
 .glayer--g{ border-left-color:var(--pvep-green); } .glayer--g .glayer__n{ background:var(--pvep-green); }
 .glayer--b{ border-left-color:var(--pvep-blue); } .glayer--b .glayer__n{ background:var(--pvep-blue); }
 
@@ -971,7 +991,7 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
       <div class="glayer ac-reveal ac-reveal--up" style="--i:2"><span class="glayer__n">1</span><div class="glayer__main"><div class="glayer__t">Chiến lược &amp; Kế hoạch 5 năm</div><div class="glayer__r">Xác định mục tiêu dài hạn và định hướng phân bổ nguồn lực.</div></div><div class="glayer__gap glayer__gap--merge">Việc thực hiện hàng năm chưa thể hiện đầy đủ tác động đến mục tiêu tổng thể.</div></div>
       <div class="glayer ac-reveal ac-reveal--up" style="--i:3"><span class="glayer__n">2</span><div class="glayer__main"><div class="glayer__t">Kế hoạch SXKD hàng năm</div><div class="glayer__r">Chuyển hóa mục tiêu trung hạn thành chỉ tiêu điều hành năm.</div></div></div>
       <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:4"><span class="glayer__n">3</span><div class="glayer__main"><div class="glayer__t">Cấp dự án dầu khí</div><div class="glayer__r">Xác lập baseline chuẩn theo vòng đời DA: phạm vi, tiến độ, chi phí, sản lượng, trữ lượng, hiệu quả đầu tư.</div></div><div class="glayer__gap">Các giả định xuyên suốt trong BCSDV chưa được theo dõi liên tục.</div></div>
-      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:5"><span class="glayer__n">4</span><div class="glayer__main"><div class="glayer__t">KPI do TGĐ giao</div><div class="glayer__r">Công cụ điều hành trực tiếp hàng năm, trong tầm kiểm soát và tầm ảnh hưởng.</div></div><div class="glayer__gap"><div>Chưa liên kết với baseline vòng đời của dự án.<div style="margin-top:0.35rem; display:flex; gap:0.35rem;"><span style="color:var(--caution)">•</span><span>Chưa thể hiện kết quả thực hiện như thế nào đến hiệu quả, mục tiêu dài hạn của dự án.</span></div></div></div></div>
+      <div class="glayer glayer--b ac-reveal ac-reveal--up" style="--i:5"><span class="glayer__n">4</span><div class="glayer__main"><div class="glayer__t">KPI do TGĐ giao</div><div class="glayer__r">Công cụ điều hành trực tiếp hàng năm, trong tầm kiểm soát và tầm ảnh hưởng.</div></div><div class="glayer__gap glayer__gap--multi"><div class="gbul"><span>Chưa liên kết với baseline vòng đời của dự án.</span></div><div class="gbul"><span>Chưa thể hiện kết quả thực hiện như thế nào đến hiệu quả, mục tiêu dài hạn của dự án.</span></div></div></div>
       <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:6"><span class="glayer__n">5</span><div class="glayer__main"><div class="glayer__t">Chỉ tiêu CV 165</div><div class="glayer__r">Đo tác động tài chính, hiệu quả vốn, dòng tiền và khả năng trả nợ.</div></div><div class="glayer__gap">Cần định vị là lớp đánh giá tác động, đo lường hiệu quả sử dụng vốn của kết quả thực hiện KPI.</div></div>
       <div class="glayer glayer--g ac-reveal ac-reveal--up" style="--i:7"><span class="glayer__n">6</span><div class="glayer__main"><div class="glayer__t">Quản trị dự án và danh mục đầu tư</div><div class="glayer__r">Ra quyết định cấp danh mục trên cơ sở hiệu quả, rủi ro và nguồn lực.</div></div><div class="glayer__gap">Chưa tích hợp đầy đủ KPI, KQ của các KPI theo CV 165 và chỉ số cảnh báo rủi ro.</div></div>
     </div>
@@ -1844,6 +1864,67 @@ body.hero-active .rail__item.is-active{ background:rgba(255,255,255,.22); }
     causes.forEach(function(c){ c.addEventListener('click',function(){ apply(c); }); });
     apply(causes[0]);
   })();
+})();
+
+/* =====================================================================
+   AUTO-FIT  — Mỗi slide tự THU NHỎ vừa khít màn hình (mọi laptop / tivi /
+   máy chiếu, mọi tỷ lệ) để KHÔNG bị cắt cụt phần đầu/đuôi.
+   • Desktop/TV: dùng `zoom` để co toàn bộ nội dung slide cho vừa chiều cao
+     khung hình (zoom co cả hộp bố cục nên không sinh thanh cuộn ảo).
+   • Điện thoại (≤768px): KHÔNG fit — để slide cao tự nhiên & cuộn dọc.
+   • Khi in: trả zoom về 1 để mỗi slide in trọn 1 trang A4.
+   Tính lại khi: tải xong font, đổi kích thước cửa sổ, xoay máy.
+   ===================================================================== */
+(function(){
+  "use strict";
+  var MOBILE = function(){ return window.matchMedia("(max-width:768px)").matches; };
+  var MIN_ZOOM = 0.55;   // không co nhỏ hơn mức này (giữ chữ còn đọc được)
+  var SAFETY   = 0.992;  // chừa 0.8% để tránh sát mép gây cuộn
+
+  function fitOne(slide){
+    var content = slide.querySelector(".slide-content");
+    if(!content) return;
+    var wrap = content.querySelector(":scope > .wrap");
+    if(!wrap) return;
+
+    // reset trước khi đo
+    wrap.style.zoom = "";
+    if(MOBILE()) return;   // mobile: để nguyên, cuộn dọc tự nhiên
+
+    var cs   = getComputedStyle(content);
+    var padT = parseFloat(cs.paddingTop)  || 0;
+    var padB = parseFloat(cs.paddingBottom) || 0;
+    var avail   = content.clientHeight - padT - padB;   // chỗ trống cho nội dung
+    var natural = wrap.offsetHeight;                    // chiều cao thực của nội dung
+    if(natural > avail && avail > 0){
+      var z = Math.max(MIN_ZOOM, (avail / natural) * SAFETY);
+      wrap.style.zoom = z;
+    }
+  }
+
+  function fitAll(){
+    document.querySelectorAll(".slide").forEach(fitOne);
+  }
+
+  // chạy lần đầu + sau khi font web nạp xong (font đổi chiều cao chữ)
+  fitAll();
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitAll); }
+  window.addEventListener("load", fitAll);
+
+  // tính lại khi đổi kích thước / xoay máy (debounce)
+  var t;
+  function schedule(){ clearTimeout(t); t = setTimeout(fitAll, 120); }
+  window.addEventListener("resize", schedule);
+  window.addEventListener("orientationchange", schedule);
+
+  // khi in: trả zoom về 1 để A4 chia trang chuẩn; in xong fit lại
+  function unzoom(){ document.querySelectorAll(".slide-content > .wrap").forEach(function(w){ w.style.zoom=""; }); }
+  window.addEventListener("beforeprint", unzoom);
+  window.addEventListener("afterprint", fitAll);
+  if(window.matchMedia){
+    var mq = window.matchMedia("print");
+    (mq.addEventListener ? mq.addEventListener.bind(mq,"change") : mq.addListener.bind(mq))(function(e){ e.matches ? unzoom() : fitAll(); });
+  }
 })();
 </script>
 </body>
